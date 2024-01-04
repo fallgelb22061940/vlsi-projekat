@@ -1,0 +1,221 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Jan  3 14:55:27 2024
+# Process ID: 9520
+# Current directory: D:/vlsi/project_4
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2888 D:\vlsi\project_4\project_4.xpr
+# Log file: D:/vlsi/project_4/vivado.log
+# Journal file: D:/vlsi/project_4\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/vlsi/project_4/project_4.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/vlsi/project_4/project_4.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2021.1/data/ip'.
+ERROR: [Vivado 12-106] *** Exception: java.lang.NullPointerException (See D:/vlsi/project_4/vivado_pid9520.debug)
+open_project: Time (s): cpu = 00:00:45 ; elapsed = 00:00:18 . Memory (MB): peak = 1116.953 ; gain = 0.000
+ERROR: [Common 17-39] 'open_project' failed due to earlier errors.
+update_compile_order -fileset sources_1
+set_property top hist_ram [current_fileset]
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: hist_ram
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1469.605 ; gain = 263.199
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'hist_ram' [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'im_ram' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted0.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized0' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted1.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized0' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized1' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted2.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized1' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized2' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted3.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized2' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized3' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted4.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized3' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized4' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted5.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized4' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized5' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted6.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized5' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized6' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted7.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized6' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'hist_ram' (2#1) [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:20]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:35 ; elapsed = 00:01:29 . Memory (MB): peak = 1638.898 ; gain = 432.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:36 ; elapsed = 00:01:30 . Memory (MB): peak = 1638.898 ; gain = 432.492
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:36 ; elapsed = 00:01:30 . Memory (MB): peak = 1638.898 ; gain = 432.492
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1638.898 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1739.672 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:02:02 ; elapsed = 00:01:41 . Memory (MB): peak = 1796.867 ; gain = 590.461
+21 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:11 ; elapsed = 00:01:53 . Memory (MB): peak = 1796.867 ; gain = 679.914
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1833.492 ; gain = 15.570
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'hist_ram' [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'im_ram' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted0.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized0' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted1.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized0' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized1' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted2.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized1' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized2' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted3.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized2' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized3' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted4.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized3' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized4' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted5.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized4' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized5' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted6.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized5' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized6' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
+	Parameter G_RAM_DEPTH bound to: 8192 - type: integer 
+	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
+	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted7.dat - type: string 
+INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized6' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'hist_ram' (2#1) [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:20]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:35 ; elapsed = 00:01:30 . Memory (MB): peak = 1963.418 ; gain = 145.496
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:36 ; elapsed = 00:01:31 . Memory (MB): peak = 1982.172 ; gain = 164.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:36 ; elapsed = 00:01:31 . Memory (MB): peak = 1982.172 ; gain = 164.250
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1982.172 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:01:59 ; elapsed = 00:02:00 . Memory (MB): peak = 1982.172 ; gain = 164.250
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1982.172 ; gain = 0.000
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2398] near string "HIGH_PERFORMANCE" ; 6 visible types match here [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:40]
+ERROR: [Synth 8-2396] near character '1' ; 3 visible types match here [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:48]
+INFO: [Synth 8-1047] first match for ''1'' found here [./vhdl_packages/1993/src/standard.vhd:11]
+INFO: [Synth 8-1047] another match for ''1'' found here [./vhdl_packages/1993/src/standard.vhd:20]
+INFO: [Synth 8-1047] another match for ''1'' found here [./vhdl_packages/1993/src/std_1164.vhd:23]
+ERROR: [Synth 8-2396] near character '0' ; 3 visible types match here [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:49]
+INFO: [Synth 8-1047] first match for ''0'' found here [./vhdl_packages/1993/src/standard.vhd:11]
+INFO: [Synth 8-1047] another match for ''0'' found here [./vhdl_packages/1993/src/standard.vhd:20]
+INFO: [Synth 8-1047] another match for ''0'' found here [./vhdl_packages/1993/src/std_1164.vhd:22]
+ERROR: [Synth 8-2396] near character '1' ; 3 visible types match here [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:50]
+INFO: [Synth 8-1047] first match for ''1'' found here [./vhdl_packages/1993/src/standard.vhd:11]
+INFO: [Synth 8-1047] another match for ''1'' found here [./vhdl_packages/1993/src/standard.vhd:20]
+INFO: [Synth 8-1047] another match for ''1'' found here [./vhdl_packages/1993/src/std_1164.vhd:23]
+INFO: [Synth 8-2810] unit rtl ignored due to previous errors [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:20]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1982.172 ; gain = 0.000
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+refresh_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1982.172 ; gain = 0.000
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+update_compile_order -fileset sources_1
+set_property top hist_ram_block [current_fileset]
+set_property top_lib xil_defaultlib [current_fileset]
+set_property top_arch Behavioral [current_fileset]
+set_property top_file D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram_block.vhd [current_fileset]
+update_compile_order -fileset sources_1
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1982.172 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'hist_ram_block' [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram_block.vhd:28]
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
