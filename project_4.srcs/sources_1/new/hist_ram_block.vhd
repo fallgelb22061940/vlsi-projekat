@@ -7,14 +7,14 @@ use work.RAM_definitions_PK.all;
 
 entity hist_ram_block is
     generic (
-        G_RAM_WIDTH : integer := 8;            		      -- Specify RAM data width
+        G_RAM_WIDTH : integer := 13;            		      -- Specify RAM data width
         G_RAM_DEPTH : integer := 256*8192;                 -- Specify RAM depth (number of entries)
         G_RAM_PERFORMANCE : string := "HIGH_PERFORMANCE"; -- Select "HIGH_PERFORMANCE" or "LOW_LATENCY" 
         G_RAM_INIT_FILE: string := ""
     );
     port (
-        addra : in std_logic_vector((clogb2(G_RAM_DEPTH)-1) downto 0); -- Write address bus, width determined from RAM_DEPTH
-        addrb : in std_logic_vector((clogb2(G_RAM_DEPTH)-1) downto 0); -- Read address bus, width determined from RAM_DEPTH
+        addra : in std_logic_vector(7 downto 0); -- Write address bus, width determined from RAM_DEPTH
+        addrb : in std_logic_vector(7 downto 0); -- Read address bus, width determined from RAM_DEPTH
         dina  : in std_logic_vector(G_RAM_WIDTH-1 downto 0);		   -- RAM input data
         clka  : in std_logic;                       			       -- Clock
         wea   : in std_logic;                       			       -- Write enable

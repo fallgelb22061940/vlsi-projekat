@@ -40,15 +40,15 @@ begin
                 G_RAM_PERFORMANCE => "HIGH_PERFORMANCE",
                 G_RAM_INIT_FILE => "lenaCorrupted" & integer'image(i) & ".dat") 
             port map (
-                addra  => std_logic_vector(wr_addr),
-                addrb  => std_logic_vector(rd_addr),
-                dina   => wr_data(i),
+                addra  => addra,
+                addrb  => addrb,
+                dina   => dina(8*i + 7 downto 8*i),
                 clka   => clk,
-                wea    => wren(i),
-                enb    => '1',
-                rstb   => '0',
-                regceb => '1',
-                doutb  => rd_data(i)
+                wea    => wea,
+                enb    => enb,
+                rstb   => rstb,
+                regceb => regceb,
+                doutb  => doutb(8*i + 7 downto 8*i)
             );
     end generate;
         
