@@ -1,0 +1,467 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:33 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 9520
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Jan 03 14:56:03 CET 2024
+Time zone: 	Central European Standard Time (Europe/Prague)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	D:/Xilinx/Vivado/2021.1/tps/win64/jre11.0.2
+Java executable: 	D:/Xilinx/Vivado/2021.1/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Vlada
+User home directory: C:/Users/Vlada
+User working directory: D:/vlsi/project_4
+User country: 	RS
+User language: 	sr
+User locale: 	sr_RS_#Latn
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2021.1
+RDI_DATADIR: D:/Xilinx/Vivado/2021.1/data
+RDI_BINDIR: D:/Xilinx/Vivado/2021.1/bin
+
+Vivado preferences file: C:/Users/Vlada/AppData/Roaming/Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: C:/Users/Vlada/AppData/Roaming/Xilinx/Vivado/2021.1/
+Vivado layouts directory: C:/Users/Vlada/AppData/Roaming/Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	D:/Xilinx/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	D:/vlsi/project_4/vivado.log
+Vivado journal file: 	D:/vlsi/project_4/vivado.jou
+Engine tmp dir: 	D:/vlsi/project_4/.Xil/Vivado-9520-DESKTOP-8SR0IUB
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_DSP: D:/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: D:/Xilinx/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: D:/Xilinx/Vivado/2021.1
+XILINX_VIVADO: D:/Xilinx/Vivado/2021.1
+XILINX_VIVADO_HLS: D:/Xilinx/Vivado/2021.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,134 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  1764 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: D:\vlsi\project_4\project_4.xpr. Version: Vivado v2021.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project D:/vlsi/project_4/project_4.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,134 MB. GUI used memory: 62 MB. Current time: 1/3/24, 2:56:05 PM CET
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/vlsi/project_4/project_4.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2021.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2021.1 (64-bit)
+# SW Build: 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Current time: Wed Jan 03 14:56:15 CET 2024
+# Process ID (PID): 9520
+# OS: Windows 10
+# User: Vlada
+# Project: project_4
+# Part: xc7z020clg400-1
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.NullPointerException (See D:/vlsi/project_4/vivado_pid9520.debug)
+*/
+// [GUI Memory]: 104 MB (+107092kb) [00:00:39]
+// [Engine Memory]: 1,134 MB (+1037617kb) [00:00:39]
+// [GUI Memory]: 122 MB (+12843kb) [00:00:40]
+// WARNING: HEventQueue.dispatchEvent() is taking  8361 ms.
+// Tcl Message: ERROR: [Vivado 12-106] *** Exception: java.lang.NullPointerException (See D:/vlsi/project_4/vivado_pid9520.debug) 
+// Tcl Message: open_project: Time (s): cpu = 00:00:45 ; elapsed = 00:00:18 . Memory (MB): peak = 1116.953 ; gain = 0.000 
+// Tcl Message: ERROR: [Common 17-39] 'open_project' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'open_project' failed due to earlier errors.  
+// a (cs): Critical Messages: addNotify
+// [GUI Memory]: 129 MB (+1067kb) [00:00:48]
+selectButton(RDIResource.HExceptionDialog_CONTINUE, "Continue"); // a
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (hist_ram_block.vhd) elapsed time: 0.3s
+// Elapsed time: 60 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hist_ram_block(Behavioral) (hist_ram_block.vhd)]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hist_ram(rtl) (hist_ram.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hist_ram(rtl) (hist_ram.vhd)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ak
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ak
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ak
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // an
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// [GUI Memory]: 137 MB (+1496kb) [00:02:08]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top hist_ram [current_fileset] 
+// bz (cs):  Set as Top : addNotify
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Set as Top"); // bz
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 482ms to process. Increasing delay to 3000 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hist_ram(rtl) (hist_ram.vhd)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hist_ram(rtl) (hist_ram.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hist_ram(rtl) (hist_ram.vhd)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // o - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cs): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cs):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7z020clg400-1 Top: hist_ram 
+// TclEventType: ELABORATE_START
+// HMemoryUtils.trashcanNow. Engine heap size: 1,181 MB. GUI used memory: 80 MB. Current time: 1/3/24, 2:58:24 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,469 MB. GUI used memory: 80 MB. Current time: 1/3/24, 2:58:39 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,469 MB. GUI used memory: 79 MB. Current time: 1/3/24, 2:58:40 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,484 MB. GUI used memory: 79 MB. Current time: 1/3/24, 2:59:10 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,509 MB. GUI used memory: 79 MB. Current time: 1/3/24, 2:59:40 PM CET
+// TclEventType: ELABORATE_FINISH
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 1,531 MB (+356623kb) [00:04:18]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,531 MB. GUI used memory: 79 MB. Current time: 1/3/24, 2:59:55 PM CET
+// Xgd.load filename: D:/Xilinx/Vivado/2021.1/data/parts/xilinx/zynq/devint/zynq/xc7z020/xc7z020.xgd; ZipEntry: xc7z020_detail.xgd elapsed time: 1.1s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 1.3s
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 1.5s
+// [Engine Memory]: 1,625 MB (+18595kb) [00:04:23]
+// Schematic: addNotify
+// PAPropertyPanels.initPanels (hist_ram.vhd) elapsed time: 0.3s
+// WARNING: HEventQueue.dispatchEvent() is taking  4693 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z020clg400-1 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1469.605 ; gain = 263.199 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'hist_ram' [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:20] INFO: [Synth 8-638] synthesizing module 'im_ram' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted0.dat - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized0' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted1.dat - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized0' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized1' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted2.dat - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized1' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized2' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted3.dat - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized2' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized3' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted4.dat - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized3' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized4' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted5.dat - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized4' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized5' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted6.dat - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized5' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized6' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted7.dat - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized6' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-256] done synthesizing module 'hist_ram' (2#1) [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:20] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:01:35 ; elapsed = 00:01:29 . Memory (MB): peak = 1638.898 ; gain = 432.492 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:01:36 ; elapsed = 00:01:30 . Memory (MB): peak = 1638.898 ; gain = 432.492 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:36 ; elapsed = 00:01:30 . Memory (MB): peak = 1638.898 ; gain = 432.492 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1638.898 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1739.672 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:02:02 ; elapsed = 00:01:41 . Memory (MB): peak = 1796.867 ; gain = 590.461 
+// Tcl Message: 21 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:02:11 ; elapsed = 00:01:53 . Memory (MB): peak = 1796.867 ; gain = 679.914 
+// OpenDesignTask elapsed time: 113.8s
+// [GUI Memory]: 155 MB (+11384kb) [00:04:27]
+// 'dU' command handler elapsed time: 116 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  1484 ms.
+// Elapsed time: 115 seconds
+dismissDialog("Open Elaborated Design"); // bz
+// PAPropertyPanels.initPanels (IM_MEMS[0].IM_MEMi (im_ram)) elapsed time: 0.6s
+// Elapsed time: 24 seconds
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[hist_ram, IM_MEMS[0].IM_MEMi (im_ram)]", 3, false); // bC
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hist_ram.vhd", 2); // m
+// [GUI Memory]: 164 MB (+1687kb) [00:05:01]
+// Elapsed time: 43 seconds
+selectCodeEditor("hist_ram.vhd", 244, 164); // bP
+selectCodeEditor("hist_ram.vhd", 244, 164, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("hist_ram.vhd", 433, 180); // bP
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aK
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hist_ram_block(Behavioral) (hist_ram_block.vhd)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hist_ram_block(Behavioral) (hist_ram_block.vhd)]", 5, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hist_ram.vhd", 2); // m
+// Elapsed time: 29 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hist_ram_block.vhd", 3); // m
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hist_ram.vhd", 2); // m
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h
+// bz (cs):  Reloading : addNotify
+// Tcl Message: refresh_design 
+// TclEventType: ELABORATE_START
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1833.492 ; gain = 15.570 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,671 MB. GUI used memory: 110 MB. Current time: 1/3/24, 3:03:04 PM CET
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'hist_ram' [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:20] INFO: [Synth 8-638] synthesizing module 'im_ram' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted0.dat - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized0' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted1.dat - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized0' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized1' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted2.dat - type: string  
+// HMemoryUtils.trashcanNow. Engine heap size: 1,759 MB. GUI used memory: 111 MB. Current time: 1/3/24, 3:03:29 PM CET
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized1' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized2' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted3.dat - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized2' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized3' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted4.dat - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized3' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized4' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted5.dat - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized4' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized5' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted6.dat - type: string  
+// HMemoryUtils.trashcanNow. Engine heap size: 1,779 MB. GUI used memory: 111 MB. Current time: 1/3/24, 3:04:09 PM CET
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized5' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized6' [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] 
+// Tcl Message: 	Parameter G_RAM_WIDTH bound to: 8 - type: integer  	Parameter G_RAM_DEPTH bound to: 8192 - type: integer  	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string  	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted7.dat - type: string  
+// Tcl Message: INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized6' (1#1) [D:/vlsi/project_4/projekat_23_24/hdl/im_ram.vhd:28] INFO: [Synth 8-256] done synthesizing module 'hist_ram' (2#1) [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:20] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:01:35 ; elapsed = 00:01:30 . Memory (MB): peak = 1963.418 ; gain = 145.496 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// [Engine Memory]: 1,804 MB (+102698kb) [00:08:44]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,804 MB. GUI used memory: 86 MB. Current time: 1/3/24, 3:04:25 PM CET
+// Engine heap size: 1,804 MB. GUI used memory: 86 MB. Current time: 1/3/24, 3:04:25 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  3294 ms.
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:01:36 ; elapsed = 00:01:31 . Memory (MB): peak = 1982.172 ; gain = 164.250 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:36 ; elapsed = 00:01:31 . Memory (MB): peak = 1982.172 ; gain = 164.250 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 1,804 MB. GUI used memory: 84 MB. Current time: 1/3/24, 3:04:28 PM CET
+// Xgd.load filename: D:/Xilinx/Vivado/2021.1/data/parts/xilinx/zynq/devint/zynq/xc7z020/xc7z020.xgd; ZipEntry: xc7z020_detail.xgd elapsed time: 0.6s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 0.6s
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 1.3s
+// Schematic: addNotify
+// PAPropertyPanels.initPanels (hist_ram_block.vhd) elapsed time: 0.2s
+// WARNING: HEventQueue.dispatchEvent() is taking  6716 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1982.172 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: refresh_design: Time (s): cpu = 00:01:59 ; elapsed = 00:02:00 . Memory (MB): peak = 1982.172 ; gain = 164.250 
+// Elapsed time: 121 seconds
+dismissDialog("Reloading"); // bz
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // o
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+// Elapsed time: 23 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hist_ram_block.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (2)", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hist_ram_block.vhd", 3); // m
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (2)", 4); // m
+// Elapsed time: 24 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hist_ram_block.vhd", 3); // m
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hist_ram.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 4); // m
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hist_ram_block.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hist_ram.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hist_ram_block.vhd", 3); // m
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hist_ram.vhd", 2); // m
+selectCodeEditor("hist_ram.vhd", 246, 249); // bP
+selectCodeEditor("hist_ram.vhd", 211, 251); // bP
+selectCodeEditor("hist_ram.vhd", 220, 251); // bP
+selectCodeEditor("hist_ram.vhd", 220, 250, false, false, false, false, true); // bP - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h
+// bz (cs):  Reloading : addNotify
+// Tcl Message: refresh_design 
+// TclEventType: ELABORATE_START
+// HMemoryUtils.trashcanNow. Engine heap size: 1,804 MB. GUI used memory: 111 MB. Current time: 1/3/24, 3:07:33 PM CET
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1982.172 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FAIL
+// Tcl Message: ERROR: [Synth 8-2398] near string "HIGH_PERFORMANCE" ; 6 visible types match here [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:40] ERROR: [Synth 8-2396] near character '1' ; 3 visible types match here [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:48] 
+// Tcl Message: INFO: [Synth 8-1047] first match for ''1'' found here [./vhdl_packages/1993/src/standard.vhd:11] INFO: [Synth 8-1047] another match for ''1'' found here [./vhdl_packages/1993/src/standard.vhd:20] INFO: [Synth 8-1047] another match for ''1'' found here [./vhdl_packages/1993/src/std_1164.vhd:23] 
+// Tcl Message: ERROR: [Synth 8-2396] near character '0' ; 3 visible types match here [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:49] 
+// Tcl Message: INFO: [Synth 8-1047] first match for ''0'' found here [./vhdl_packages/1993/src/standard.vhd:11] INFO: [Synth 8-1047] another match for ''0'' found here [./vhdl_packages/1993/src/standard.vhd:20] INFO: [Synth 8-1047] another match for ''0'' found here [./vhdl_packages/1993/src/std_1164.vhd:22] 
+// Tcl Message: ERROR: [Synth 8-2396] near character '1' ; 3 visible types match here [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:50] 
+// Tcl Message: INFO: [Synth 8-1047] first match for ''1'' found here [./vhdl_packages/1993/src/standard.vhd:11] INFO: [Synth 8-1047] another match for ''1'' found here [./vhdl_packages/1993/src/standard.vhd:20] INFO: [Synth 8-1047] another match for ''1'' found here [./vhdl_packages/1993/src/std_1164.vhd:23] INFO: [Synth 8-2810] unit rtl ignored due to previous errors [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:20] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 1982.172 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: RTL Elaboration failed 
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1982.172 ; gain = 0.000 
+// Tcl Message: ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.  
+// W (cs): Critical Messages: addNotify
+// Elapsed time: 35 seconds
+dismissDialog("Reloading"); // bz
+// TclEventType: DESIGN_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // W
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hist_ram.vhd", 2); // m
+// Elapsed time: 10 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, rtl_1, General Messages, [Synth 8-2398] near string HIGH_PERFORMANCE ; 6 visible types match here [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram.vhd:40]. ]", 10, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;D:\vlsi\project_4\project_4.srcs\sources_1\new\hist_ram.vhd;-;;-;16;-;line;-;40;-;;-;16;-;"); // ah
+// HMemoryUtils.trashcanNow. Engine heap size: 1,804 MB. GUI used memory: 111 MB. Current time: 1/3/24, 3:37:34 PM CET
+// Elapsed time: 2389 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hist_ram_block.vhd", 3); // m
+// Elapsed time: 44 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hist_ram(rtl) (hist_ram.vhd)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, im_ram_inst_example(rtl) (im_ram_inst.vhd)]", 2, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 7, true); // D - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hist_ram(rtl) (hist_ram.vhd)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hist_ram(rtl) (hist_ram.vhd), IM_MEMS[0].IM_MEMi : hist_ram_block(Behavioral) (hist_ram_block.vhd)]", 2, false, false, false, false, true, false); // D - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ak
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ak
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // an
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top hist_ram_block [current_fileset] 
+// bz (cs):  Set as Top : addNotify
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top_lib xil_defaultlib [current_fileset] 
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property top_arch Behavioral [current_fileset] 
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top_file D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram_block.vhd [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Set as Top"); // bz
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 23 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h
+// bz (cs):  Reloading : addNotify
+// Tcl Message: refresh_design 
+// TclEventType: ELABORATE_START
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1982.172 ; gain = 0.000 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'hist_ram_block' [D:/vlsi/project_4/project_4.srcs/sources_1/new/hist_ram_block.vhd:28] 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,895 MB. GUI used memory: 105 MB. Current time: 1/3/24, 3:49:43 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,267 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:49:59 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,528 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:50:13 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,805 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:50:29 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,031 MB. GUI used memory: 102 MB. Current time: 1/3/24, 3:50:43 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,314 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:50:59 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,544 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:51:13 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 3,817 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:51:29 PM CET
+// [Engine Memory]: 3,843 MB (+2043182kb) [00:55:53]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,037 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:51:43 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 4,309 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:51:59 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 4,530 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:52:13 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 4,756 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:52:29 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 4,965 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:52:43 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 5,213 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:52:59 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  2460 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 5,439 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:53:15 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 5,725 MB. GUI used memory: 102 MB. Current time: 1/3/24, 3:53:35 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 5,822 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:53:43 PM CET
+// [Engine Memory]: 6,052 MB (+2114467kb) [00:58:21]
+// HMemoryUtils.trashcanNow. Engine heap size: 6,080 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:54:00 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 6,293 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:54:15 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 6,510 MB. GUI used memory: 102 MB. Current time: 1/3/24, 3:54:30 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 6,688 MB. GUI used memory: 102 MB. Current time: 1/3/24, 3:54:43 PM CET
+// Elapsed time: 339 seconds
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a
+// [Engine Memory]: 6,820 MB (+488686kb) [00:59:15]
+selectCodeEditor("hist_ram_block.vhd", 538, 401); // bP
+selectCodeEditor("hist_ram_block.vhd", 520, 256); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 6,936 MB. GUI used memory: 102 MB. Current time: 1/3/24, 3:55:00 PM CET
+selectButton("HStatusBar_ProgressStatusItem_Cancel", "Cancel"); // NullButton
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// HMemoryUtils.trashcanNow. Engine heap size: 7,105 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:55:13 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 7,349 MB. GUI used memory: 102 MB. Current time: 1/3/24, 3:55:30 PM CET
+// Elapsed time: 36 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k
+// HMemoryUtils.trashcanNow. Engine heap size: 7,517 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:55:43 PM CET
+// [Engine Memory]: 7,530 MB (+386098kb) [01:00:06]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hist_ram.vhd", 2); // m
+// Elapsed time: 14 seconds
+selectCodeEditor("hist_ram.vhd", 553, 294); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 7,748 MB. GUI used memory: 103 MB. Current time: 1/3/24, 3:56:00 PM CET
+selectCodeEditor("hist_ram.vhd", 270, 281); // bP
+selectCodeEditor("hist_ram.vhd", 270, 281, false, false, false, false, true); // bP - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 7,916 MB. GUI used memory: 102 MB. Current time: 1/3/24, 3:56:13 PM CET
+// Elapsed time: 18 seconds
+closeMainWindow("project_4 - [D:/vlsi/project_4/project_4.xpr] - Vivado 2021.1"); // cs
+// HOptionPane Warning: 'A background task is running. Please wait until it completes to exit Vivado. If you choose to abort background task and exit immediately, you will lose all unsaved changes to project. (Background Task)'

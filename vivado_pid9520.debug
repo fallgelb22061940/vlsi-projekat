@@ -1,0 +1,30 @@
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2021.1 (64-bit)
+# SW Build: 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Current time: Wed Jan 03 14:56:15 CET 2024
+# Process ID (PID): 9520
+# User: Vlada
+# OS: Windows 10
+# Project: project_4
+# Part: xc7z020clg400-1
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+Wed Jan 03 14:56:15 CET 2024
+java.lang.NullPointerException
+	at ui.dlg.project.c.b.b.<init>(SourceFile:126)
+	at ui.dlg.J.a.c.aq.gIT(SourceFile:43)
+	at ui.dlg.J.a.bLk(SourceFile:86)
+	at ui.dlg.J.d.uq(SourceFile:571)
+	at ui.dlg.J.d.gJm(SourceFile:970)
+	at ui.dlg.J.d.gJu(SourceFile:1178)
+	at ui.dlg.J.d.aY(SourceFile:202)
+	at ui.dlg.J.d.<init>(SourceFile:143)
+	at ui.views.c.dX.O(SourceFile:112)
+	at ui.cW.aOo(SourceFile:905)
+	at ui.frmwork.y.run(SourceFile:203)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
