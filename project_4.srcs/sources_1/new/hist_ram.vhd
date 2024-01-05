@@ -9,10 +9,10 @@ entity hist_ram is
         clk:in std_logic;
         --addrb:in std_logic_vector(7 downto 0); -- Read address bus, width determined from RAM_DEPTH
         dina:in std_logic_vector(103 downto 0);-- RAM input data
-        wea:in std_logic:='1'; --write enable
-        enb:in std_logic:='1'; --enable
-        rstb:in std_logic:='0'; -- Output reset (does not affect memory contents)
-        regceb: in std_logic:='1';   -- Output register enable
+        wea:in std_logic; --write enable
+        enb:in std_logic; --enable
+        rstb:in std_logic; -- Output reset (does not affect memory contents)
+        regceb: in std_logic;   -- Output register enable
         doutb:out std_logic_vector(103 downto 0) --output data
     );
 end hist_ram;

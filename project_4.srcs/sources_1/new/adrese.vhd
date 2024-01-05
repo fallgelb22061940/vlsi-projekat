@@ -16,13 +16,15 @@ begin
     process(clk)is
     begin
         if rising_edge(clk)then
-            if(read_picture='1')then
+            if read_picture='1'then
                 counter<=counter+1;
-                address<=std_logic_vector(counter);
-                if counter=8191 then
-                    read_pic_complete<='1';
-                end if;
+            elsif counter=8191 then
+                counter<=counter;
+                read_pic_complete<='1';
+            else
+                counter<=counter;
             end if;
+            address<=std_logic_vector(counter);
         end if;
     end process;
 end behavioral;

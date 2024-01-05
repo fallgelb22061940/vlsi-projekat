@@ -1,0 +1,214 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:33 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 15604
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri Jan 05 10:16:51 CET 2024
+Time zone: 	Central European Standard Time (Europe/Prague)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	D:/Xilinx/Vivado/2021.1/tps/win64/jre11.0.2
+Java executable: 	D:/Xilinx/Vivado/2021.1/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Vlada
+User home directory: C:/Users/Vlada
+User working directory: D:/vlsi/vlsi-projekat
+User country: 	RS
+User language: 	sr
+User locale: 	sr_RS_#Latn
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2021.1
+RDI_DATADIR: D:/Xilinx/Vivado/2021.1/data
+RDI_BINDIR: D:/Xilinx/Vivado/2021.1/bin
+
+Vivado preferences file: C:/Users/Vlada/AppData/Roaming/Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: C:/Users/Vlada/AppData/Roaming/Xilinx/Vivado/2021.1/
+Vivado layouts directory: C:/Users/Vlada/AppData/Roaming/Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	D:/Xilinx/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	D:/vlsi/vlsi-projekat/vivado.log
+Vivado journal file: 	D:/vlsi/vlsi-projekat/vivado.jou
+Engine tmp dir: 	D:/vlsi/vlsi-projekat/.Xil/Vivado-15604-DESKTOP-8SR0IUB
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_DSP: D:/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: D:/Xilinx/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: D:/Xilinx/Vivado/2021.1
+XILINX_VIVADO: D:/Xilinx/Vivado/2021.1
+XILINX_VIVADO_HLS: D:/Xilinx/Vivado/2021.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,062 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  1391 ms.
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: D:\vlsi\vlsi-projekat\project_4.xpr. Version: Vivado v2021.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/vlsi/vlsi-projekat/project_4.xpr 
+// TclEventType: FLOW_ADDED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,062 MB. GUI used memory: 60 MB. Current time: 1/5/24, 10:16:52 AM CET
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/vlsi/vlsi-projekat/project_4.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 63 MB (+63252kb) [00:00:58]
+// [Engine Memory]: 1,062 MB (+962243kb) [00:00:58]
+// [GUI Memory]: 86 MB (+21157kb) [00:00:59]
+// [GUI Memory]: 109 MB (+19581kb) [00:01:00]
+// WARNING: HEventQueue.dispatchEvent() is taking  8396 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2021.1/data/ip'. 
+// Project name: project_4; location: D:/vlsi/vlsi-projekat; part: xc7z020clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1063.457 ; gain = 0.000 
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1328 ms. Increasing delay to 3984 ms.
+// [GUI Memory]: 127 MB (+13395kb) [00:01:37]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 80 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1269 ms.
+selectButton("NEXT", "Next >"); // JButton
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a
+// Elapsed time: 18 seconds
+String[] filenames31467 = {"D:/vlsi/vlsi-projekat/project_4.srcs/sources_1/new/brojaci2.vhd", "D:/vlsi/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd"};
+setFileChooser(filenames31467);
+selectButton("FINISH", "Finish"); // JButton
+// 'g' command handler elapsed time: 30 seconds
+dismissDialog("Add Sources"); // c
+// bz (cs):  Add Sources  : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {D:/vlsi/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd D:/vlsi/vlsi-projekat/project_4.srcs/sources_1/new/brojaci2.vhd} 
+dismissDialog("Add Sources"); // bz
+// [GUI Memory]: 139 MB (+5915kb) [00:03:17]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// PAPropertyPanels.initPanels (histogram_complete.vhd) elapsed time: 0.4s
+// Elapsed time: 68 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, histogram_complete(Behavioral) (histogram_complete.vhd)]", 1, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ak
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ak
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // an
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// bz (cs):  Set as Top : addNotify
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top histogram_complete [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Set as Top"); // bz
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 468ms to process. Increasing delay to 3000 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 47 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // o - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// A (cs): Elaborate Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// bz (cs):  Open Elaborated Design : addNotify
+dismissDialog("Elaborate Design"); // A
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7z020clg400-1 Top: histogram_complete 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,062 MB. GUI used memory: 83 MB. Current time: 1/5/24, 10:21:49 AM CET
+// TclEventType: ELABORATE_START
+// HMemoryUtils.trashcanNow. Engine heap size: 1,266 MB. GUI used memory: 83 MB. Current time: 1/5/24, 10:22:07 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,411 MB. GUI used memory: 83 MB. Current time: 1/5/24, 10:22:19 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,466 MB. GUI used memory: 83 MB. Current time: 1/5/24, 10:22:49 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,483 MB. GUI used memory: 83 MB. Current time: 1/5/24, 10:23:20 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,685 MB. GUI used memory: 83 MB. Current time: 1/5/24, 10:23:47 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,460 MB. GUI used memory: 83 MB. Current time: 1/5/24, 10:24:02 AM CET
+// [Engine Memory]: 2,461 MB (+1410963kb) [00:07:50]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,463 MB. GUI used memory: 83 MB. Current time: 1/5/24, 10:24:19 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,476 MB. GUI used memory: 83 MB. Current time: 1/5/24, 10:24:49 AM CET
+// Elapsed time: 232 seconds
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a
+// 'dU' command handler elapsed time: 235 seconds
+// HMemoryUtils.trashcanNow. Engine heap size: 2,480 MB. GUI used memory: 83 MB. Current time: 1/5/24, 10:25:12 AM CET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, histogram_complete(Behavioral) (histogram_complete.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, histogram_complete(Behavioral) (histogram_complete.vhd)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 2,517 MB. GUI used memory: 84 MB. Current time: 1/5/24, 10:25:20 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,519 MB. GUI used memory: 85 MB. Current time: 1/5/24, 10:25:50 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,519 MB. GUI used memory: 85 MB. Current time: 1/5/24, 10:26:49 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,519 MB. GUI used memory: 85 MB. Current time: 1/5/24, 10:27:20 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,519 MB. GUI used memory: 85 MB. Current time: 1/5/24, 10:28:19 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,519 MB. GUI used memory: 85 MB. Current time: 1/5/24, 10:28:50 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,519 MB. GUI used memory: 85 MB. Current time: 1/5/24, 10:29:19 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,519 MB. GUI used memory: 85 MB. Current time: 1/5/24, 10:29:49 AM CET
+// Elapsed time: 290 seconds
+selectButton("HStatusBar_ProgressStatusItem_Cancel", "Cancel"); // NullButton
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, kontroler(behavioral) (kontroler.vhd)]", 6, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, kontroler(behavioral) (kontroler.vhd)]", 6, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("kontroler.vhd", 128, 73); // bP
+selectCodeEditor("kontroler.vhd", 198, 111); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,523 MB. GUI used memory: 85 MB. Current time: 1/5/24, 10:30:19 AM CET
+selectCodeEditor("kontroler.vhd", 138, 79); // bP
+selectCodeEditor("kontroler.vhd", 185, 81); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,523 MB. GUI used memory: 86 MB. Current time: 1/5/24, 10:30:50 AM CET
+// Elapsed time: 39 seconds
+selectCodeEditor("kontroler.vhd", 115, 439); // bP
+selectCodeEditor("kontroler.vhd", 255, 453); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 2,525 MB. GUI used memory: 85 MB. Current time: 1/5/24, 10:32:19 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,526 MB. GUI used memory: 86 MB. Current time: 1/5/24, 10:32:49 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,526 MB. GUI used memory: 86 MB. Current time: 1/5/24, 10:33:19 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,526 MB. GUI used memory: 86 MB. Current time: 1/5/24, 10:33:49 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,526 MB. GUI used memory: 85 MB. Current time: 1/5/24, 10:34:20 AM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 2,526 MB. GUI used memory: 86 MB. Current time: 1/5/24, 10:35:19 AM CET

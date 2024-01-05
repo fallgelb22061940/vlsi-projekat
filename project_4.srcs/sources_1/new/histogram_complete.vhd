@@ -6,6 +6,7 @@ entity histogram_complete is
         read_picture:in std_logic;
         input_addr:in std_logic_vector(12 downto 0);
         read_pic_complete:out std_logic;
+        hist_complete:out std_logic;
         in_data:in std_logic_vector(63 downto 0);
         output:out std_logic_vector(103 downto 0)
     );
@@ -52,7 +53,10 @@ architecture Behavioral of histogram_complete is
     component brojaci is 
         port(
             input:in std_logic_vector(103 downto 0);
-            output:out std_logic_vector(103 downto 0)
+            output:out std_logic_vector(103 downto 0);
+            clk:in std_logic;
+            hist_complete:out std_logic
+            
         );
     end component; 
 begin
@@ -85,6 +89,8 @@ begin
     );
     brojac:brojaci port map(
         input=>output_signal,
+        clk=>clk,
+        hist_complete=>hist_complete,
         output=>brojac_data
     );
     output<=output_signal;
