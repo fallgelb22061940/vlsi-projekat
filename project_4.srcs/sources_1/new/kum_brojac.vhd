@@ -14,8 +14,17 @@ begin
     process(clk)is
     begin
         if rising_edge(clk)then
-            counter<=std_logic_vector(unsigned(counter)+1);
-            output<=counter;
+            if start_kum='1'then
+                if unsigned(counter)=255 then
+                    counter<=counter;
+                else
+                    counter<=std_logic_vector(unsigned(counter)+1);
+                end if;
+                output<=counter;
+            else
+                counter<=counter;
+                output<=counter;
+            end if;
         end if;
     end process;
 end Behavioral;

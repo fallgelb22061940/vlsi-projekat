@@ -9,6 +9,7 @@ entity kontroler is
         read_pic_complete:in std_logic;
         hist_complete:in std_logic;
         start_kum:out std_logic;
+        kum_complete:in std_logic;
         reset:in std_logic
     );
 end kontroler;
@@ -32,7 +33,6 @@ begin
     begin
         if rising_edge(clk)then
             if reset='0'then
-                --state_reg<=idle;
                 next_state<=idle;
             elsif start='1'then
                 next_state<=histogram;

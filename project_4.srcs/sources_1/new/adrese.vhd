@@ -17,10 +17,12 @@ begin
     begin
         if rising_edge(clk)then
             if read_picture='1'then
-                counter<=counter+1;
-            elsif counter=8191 then
-                counter<=counter;
-                read_pic_complete<='1';
+                if counter=8191 then
+                    counter<=counter;
+                    read_pic_complete<='1';
+                else
+                    counter<=counter+1;
+                end if;
             else
                 counter<=counter;
             end if;

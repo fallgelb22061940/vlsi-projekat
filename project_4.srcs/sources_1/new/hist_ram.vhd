@@ -7,7 +7,7 @@ entity hist_ram is
     port (
         addra:in std_logic_vector(63 downto 0); --Write address bus, width determined from RAM_DEPTH
         clk:in std_logic;
-        --addrb:in std_logic_vector(7 downto 0); -- Read address bus, width determined from RAM_DEPTH
+        addrb:in std_logic_vector(63 downto 0); -- Read address bus, width determined from RAM_DEPTH
         dina:in std_logic_vector(103 downto 0);-- RAM input data
         wea:in std_logic; --write enable
         enb:in std_logic; --enable
@@ -41,7 +41,7 @@ begin
             ) 
             port map (
                 addra  => addra(8*i + 7 downto 8*i),
-                addrb  => addra(8*i + 7 downto 8*i),
+                addrb  => addrb(8*i + 7 downto 8*i),
                 dina   => dina(13*i + 12 downto 13*i),
                 clka   => clk,
                 wea    => wea,
