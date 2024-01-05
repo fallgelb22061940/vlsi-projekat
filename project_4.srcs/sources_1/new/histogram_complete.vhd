@@ -8,6 +8,7 @@ entity histogram_complete is
         read_pic_complete:out std_logic;
         hist_complete:out std_logic;
         in_data:in std_logic_vector(63 downto 0);
+        start_kum:in std_logic;
         output:out std_logic_vector(103 downto 0)
     );
 end histogram_complete;
@@ -16,6 +17,9 @@ architecture Behavioral of histogram_complete is
     signal adresa2:std_logic_vector(63 downto 0);
     signal brojac_data:std_logic_vector(103 downto 0);
     signal output_signal:std_logic_vector(103 downto 0);
+    signal input_2:std_logic_vector(7 downto 0);
+    signal kum_brojac_output:std_logic_vector(7 downto 0);
+    signal write_2:std_logic;
     component hist_ram is
         port(
             addra:in std_logic_vector(63 downto 0); --Write address bus, width determined from RAM_DEPTH
@@ -50,6 +54,13 @@ architecture Behavioral of histogram_complete is
             doutb:out std_logic_vector(63 downto 0) --output data
         );
     end component;
+    component kum_brojac is
+        port(
+            start_kum:in std_logic;
+            output:out std_logic_vector(7 downto 0);
+            clk:in std_logic
+        );
+    end component;
     component brojaci is 
         port(
             input:in std_logic_vector(103 downto 0);
@@ -60,6 +71,15 @@ architecture Behavioral of histogram_complete is
         );
     end component; 
 begin
+    process(start_kum)is
+    begin
+        if start_kum='1'then
+            input_2<=kum_brojac_output;
+        else
+            input_2<=adresa2;
+        end if;
+    end process;
+    write_2<=not start_kum;
     adresa:adrese port map(
         clk=>clk,
         read_picture=>read_picture,
@@ -83,15 +103,20 @@ begin
         doutb=>output_signal,
         dina=>brojac_data,
         enb=>'1',
-        wea=>'1',
+        wea=>write_2,
         rstb=>'0',
         regceb=>'1'
     );
-    brojac:brojaci port map(
+    inkrementer:brojaci port map(
         input=>output_signal,
         clk=>clk,
         hist_complete=>hist_complete,
         output=>brojac_data
+    );
+    kumul_brojac:kum_brojac port map(
+        start_kum=>start_kum,
+        clk=>clk,
+        output=>kum_brojac_output
     );
     output<=output_signal;
 end Behavioral;
