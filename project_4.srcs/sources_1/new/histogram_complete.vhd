@@ -141,7 +141,7 @@ begin
         doutb=>adresa2,
         dina=>in_data,
         enb=>'1',
-        wea=>'0',
+        wea=>start_slika,
         rstb=>'0',
         regceb=>'1'
     );
