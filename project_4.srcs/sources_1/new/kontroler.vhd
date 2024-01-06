@@ -10,6 +10,7 @@ entity kontroler is
         hist_complete:in std_logic;
         start_kum:out std_logic;
         kum_complete:in std_logic;
+        start_slika:out std_logic;
         reset:in std_logic
     );
 end kontroler;
@@ -36,8 +37,10 @@ begin
                 next_state<=idle;
             elsif start='1'then
                 next_state<=histogram;
-            elsif read_pic_complete='1'then
+            elsif hist_complete='1'then
                 next_state<=kumulativni;
+            elsif kum_complete='1'then
+                next_state<=slika;
             else
                 next_state<=state_reg;
             end if;
@@ -68,4 +71,14 @@ begin
             end if;
         end if;
     end process kum_hist;
+    ispravljanje:process(clk)is
+    begin
+        if rising_edge(clk)then
+            if kum_complete='1'then
+                start_slika<='1';
+            else
+                start_slika<='0';
+            end if;
+        end if;
+    end process ispravljanje;
 end behavioral;

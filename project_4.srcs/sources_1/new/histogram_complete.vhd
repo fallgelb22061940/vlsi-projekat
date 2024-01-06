@@ -11,7 +11,8 @@ entity histogram_complete is
         --hist_start:in std_logic;
         in_data:in std_logic_vector(63 downto 0);
         start_kum:in std_logic;
-        kum_complete:out std_logic
+        kum_complete:out std_logic;
+        start_slika:in std_logic
         --output:out std_logic_vector(12 downto 0)
     );
 end histogram_complete;
@@ -33,6 +34,13 @@ architecture Behavioral of histogram_complete is
     signal ulaz_hist_inkrementer:std_logic_vector(12 downto 0);
     signal izlaz_hist_inkrementer:std_logic_vector(12 downto 0);
     signal kum_gotov:std_logic;
+    signal start_kum_tmp:std_logic;
+    component klamper is
+        port(
+            input:in std_logic_vector(12 downto 0);
+            output:out std_logic_vector(12 downto 0)
+        );
+    end component;
     component hist_ram is
         port(
             addra:in std_logic_vector(63 downto 0); --Write address bus, width determined from RAM_DEPTH
@@ -116,14 +124,10 @@ begin
     end process;
     write_2<=not histogram_complete and start_kum;
     kum_rezultat<="000"&output_kumul(16 downto 7);
-    process(kum_rezultat)
-    begin
-        if unsigned(kum_rezultat) > 255 then
-            kum_rezultat2 <= std_logic_vector(to_unsigned(255, kum_rezultat'length));
-        else
-            kum_rezultat2<=kum_rezultat;
-        end if;
-    end process;
+    klamp:klamper port map(
+        input=>kum_rezultat,
+        output=>kum_rezultat2
+    );
     adresa:counter_13bit port map(
         clk=>clk,
         in_signal=>read_picture,
@@ -162,6 +166,11 @@ begin
         clk=>clk,
         output=>hist_start_tmp
     );
+    reg3:registar_1bit port map(
+        clk=>clk,
+        input=>start_kum,
+        output=>start_kum_tmp
+    );
     hist_count:counter_13bit port map(
         in_signal=>hist_start,
         out_signal=>histogram_complete,
@@ -182,7 +191,7 @@ begin
     sabiraci_kumul:sabiraci port map(
         input=>output_signal,
         clk=>clk,
-        start_kum=>start_kum,
+        start_kum=>start_kum_tmp,
         kum_complete=>kum_complete,
         output=>output_kumul
     );
