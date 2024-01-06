@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Jan  5 10:15:21 2024
+# Process ID: 15604
+# Current directory: D:/vlsi/vlsi-projekat
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2792 D:\vlsi\vlsi-projekat\project_4.xpr
+# Log file: D:/vlsi/vlsi-projekat/vivado.log
+# Journal file: D:/vlsi/vlsi-projekat\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/vlsi/vlsi-projekat/project_4.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse {D:/vlsi/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd D:/vlsi/vlsi-projekat/project_4.srcs/sources_1/new/brojaci2.vhd}
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top histogram_complete [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1

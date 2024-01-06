@@ -8,10 +8,11 @@ entity histogram_complete is
         input_addr:in std_logic_vector(12 downto 0);
         read_pic_complete:out std_logic;
         hist_complete:out std_logic;
+        --hist_start:in std_logic;
         in_data:in std_logic_vector(63 downto 0);
         start_kum:in std_logic;
-        kum_complete:out std_logic;
-        output:out std_logic_vector(12 downto 0)
+        kum_complete:out std_logic
+        --output:out std_logic_vector(12 downto 0)
     );
 end histogram_complete;
 architecture Behavioral of histogram_complete is
@@ -27,6 +28,11 @@ architecture Behavioral of histogram_complete is
     signal histogram_complete:std_logic;
     signal kum_rezultat:std_logic_vector(12 downto 0);
     signal kum_rezultat2:std_logic_vector(12 downto 0);
+    signal hist_start:std_logic;
+    signal hist_start_tmp:std_logic;
+    signal ulaz_hist_inkrementer:std_logic_vector(12 downto 0);
+    signal izlaz_hist_inkrementer:std_logic_vector(12 downto 0);
+    signal kum_gotov:std_logic;
     component hist_ram is
         port(
             addra:in std_logic_vector(63 downto 0); --Write address bus, width determined from RAM_DEPTH
@@ -40,12 +46,12 @@ architecture Behavioral of histogram_complete is
             doutb:out std_logic_vector(103 downto 0) --output data
         );
     end component;
-    component adrese is
+    component counter_13bit is
         port(
             clk:in std_logic;
-            read_picture:in std_logic;
-            read_pic_complete:out std_logic;
-            address:out std_logic_vector(12 downto 0)
+            in_signal:in std_logic;
+            output:out std_logic_vector(12 downto 0);
+            out_signal:out std_logic
         );
     end component;
     component im_ram_inst_example is
@@ -61,22 +67,22 @@ architecture Behavioral of histogram_complete is
             doutb:out std_logic_vector(63 downto 0) --output data
         );
     end component;
-    component kum_brojac is
+    component counter_8bit is
         port(
-            start_kum:in std_logic;
+            in_signal:in std_logic;
             output:out std_logic_vector(7 downto 0);
+            out_signal:out std_logic;
             clk:in std_logic
         );
     end component;
     component brojaci is 
         port(
             input:in std_logic_vector(103 downto 0);
-            output:out std_logic_vector(103 downto 0);
-            clk:in std_logic;
-            hist_complete:out std_logic
-            
+            output:out std_logic_vector(103 downto 0)
+            --clk:in std_logic
+            --hist_complete:out std_logic
         );
-    end component; 
+    end component;
     component sabiraci is
         port(
             input:in std_logic_vector(103 downto 0);
@@ -84,6 +90,13 @@ architecture Behavioral of histogram_complete is
             output:out std_logic_vector(16 downto 0);
             kum_complete:out std_logic;
             start_kum:in std_logic
+        );
+    end component;
+    component registar_1bit is 
+        port(
+            input:in std_logic;
+            clk:in std_logic;
+            output:out std_logic
         );
     end component;
 begin
@@ -113,11 +126,11 @@ begin
             kum_rezultat2<=kum_rezultat;
         end if;
     end process;
-    adresa:adrese port map(
+    adresa:counter_13bit port map(
         clk=>clk,
-        read_picture=>read_picture,
-        read_pic_complete=>read_pic_complete,
-        address=>adresa1
+        in_signal=>read_picture,
+        out_signal=>read_pic_complete,
+        output=>adresa1
     );
     slika:im_ram_inst_example port map(
         clk=>clk,
@@ -141,16 +154,31 @@ begin
         rstb=>'0',
         regceb=>'1'
     );
-    inkrementer:brojaci port map(
-        input=>output_signal,
+    reg1:registar_1bit port map(
+        input=>hist_start_tmp,
         clk=>clk,
-        hist_complete=>histogram_complete,
+        output=>hist_start
+    );
+    reg2:registar_1bit port map(
+        input=>read_picture,
+        clk=>clk,
+        output=>hist_start_tmp
+    );
+    hist_count:counter_13bit port map(
+        in_signal=>hist_start,
+        out_signal=>histogram_complete,
+        clk=>clk,
+        output=>open
+    );
+    inkrementers:brojaci port map(
+        input=>output_signal,
         output=>inkrementer_data
     );
     hist_complete<=histogram_complete;
-    kumul_brojac:kum_brojac port map(
-        start_kum=>start_kum,
+    kum_brojac:counter_8bit port map(
+        in_signal=>start_kum,
         clk=>clk,
+        out_signal=>kum_gotov,
         output=>kum_brojac_output
     );
     sabiraci_kumul:sabiraci port map(

@@ -1,0 +1,24 @@
+0.7
+2020.2
+Apr 18 2022
+16:05:34
+D:/vlsi-projekat/project_4.srcs/sim_1/new/adrese_tb.vhd,1704552827,vhdl,,,,tb_adrese,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sim_1/new/counter_13bit_tb.vhd,1704552979,vhdl,,,,counter_13bit_tb,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sim_1/new/kontroler_tb.vhd,1704485987,vhdl,,,,kontroler_tb,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sources_1/new/adrese.vhd,1704553445,vhdl,,,,adrese,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sources_1/new/brojaci.vhd,1704550905,vhdl,D:/vlsi-projekat/project_4.srcs/sources_1/new/brojaci2.vhd,,,inkrementer,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sources_1/new/brojaci2.vhd,1704551832,vhdl,,,,brojaci,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sources_1/new/counter_13bit.vhd,1704553329,vhdl,,,,counter_13bit,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sources_1/new/hist_brojac.vhd,1704548383,vhdl,,,,hist_brojac,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sources_1/new/hist_ram.vhd,1704480801,vhdl,,,,hist_ram,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sources_1/new/hist_ram_block.vhd,1704396353,vhdl,D:/vlsi-projekat/project_4.srcs/sources_1/new/hist_ram.vhd,,,hist_ram_block,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd,1704551854,vhdl,,,,histogram_complete,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sources_1/new/kontroler.vhd,1704490002,vhdl,,,,kontroler,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sources_1/new/kum_brojac.vhd,1704496898,vhdl,,,,kum_brojac,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sources_1/new/registar.vhd,1704490109,vhdl,D:/vlsi-projekat/project_4.srcs/sources_1/new/sabiraci.vhd,,,registar,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd,1704549814,vhdl,,,,registar_1bit,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sources_1/new/sabirac.vhd,1704489619,vhdl,D:/vlsi-projekat/project_4.srcs/sources_1/new/sabiraci.vhd,,,sabirac,,,,,,,,
+D:/vlsi-projekat/project_4.srcs/sources_1/new/sabiraci.vhd,1704496622,vhdl,,,,sabiraci,,,,,,,,
+D:/vlsi-projekat/projekat_23_24/hdl/RAM_definitions_PK.vhd,1704385923,vhdl,D:/vlsi-projekat/project_4.srcs/sources_1/new/hist_ram.vhd;D:/vlsi-projekat/project_4.srcs/sources_1/new/hist_ram_block.vhd;D:/vlsi-projekat/projekat_23_24/hdl/im_ram.vhd;D:/vlsi-projekat/projekat_23_24/hdl/im_ram_inst.vhd,,,ram_definitions_pk,,,,,,,,
+D:/vlsi-projekat/projekat_23_24/hdl/im_ram.vhd,1704385923,vhdl,D:/vlsi-projekat/projekat_23_24/hdl/im_ram_inst.vhd,,,im_ram,,,,,,,,
+D:/vlsi-projekat/projekat_23_24/hdl/im_ram_inst.vhd,1704473337,vhdl,,,,im_ram_inst_example,,,,,,,,
