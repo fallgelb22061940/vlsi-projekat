@@ -79,8 +79,6 @@ architecture Behavioral of histogram_complete is
         port(
             input:in std_logic_vector(103 downto 0);
             output:out std_logic_vector(103 downto 0)
-            --clk:in std_logic
-            --hist_complete:out std_logic
         );
     end component;
     component sabiraci is
