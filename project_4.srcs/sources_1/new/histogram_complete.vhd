@@ -122,7 +122,7 @@ begin
             dina2<=inkrementer_data;
         end if;
     end process;
-    write_2<=not histogram_complete and start_kum;
+    write_2<=not histogram_complete and start_kum and not start_slika;
     kum_rezultat<="000"&output_kumul(16 downto 7);
     klamp:klamper port map(
         input=>kum_rezultat,
