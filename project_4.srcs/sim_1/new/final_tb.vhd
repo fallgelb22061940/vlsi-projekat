@@ -14,7 +14,7 @@ architecture sim of final_tb is
         port(
             clk:in std_logic;
             start:in std_logic;
-            output:out std_logic_vector(63 downto 0);
+            --output:out std_logic_vector(63 downto 0);
             reset:in std_logic
         );
     end component;
@@ -22,7 +22,7 @@ begin
     uut:final port map(
         clk=>clk,
         start=>start,
-        output=>output,
+        --output=>output,
         reset=>reset
     );
     clk<=not clk after Tclk/2;

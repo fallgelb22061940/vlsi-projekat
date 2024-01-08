@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "inkrementer_tb_behav" "xil_defaultlib.inkrementer_tb" -log "elaborate.log" 

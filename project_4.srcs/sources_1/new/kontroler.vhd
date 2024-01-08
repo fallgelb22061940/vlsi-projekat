@@ -67,7 +67,7 @@ begin
     kum_hist:process(clk)is
     begin
         if rising_edge(clk)then
-            if hist_complete='1'then
+            if hist_complete='1'and reset='0'then
                 start_kum<='1';
             else
                 start_kum<='0';
@@ -77,7 +77,7 @@ begin
     ispravljanje:process(clk)is
     begin
         if rising_edge(clk)then
-            if kum_complete='1'then
+            if kum_complete='1'and reset='0'then
                 start_slika<='1';
             else
                 start_slika<='0';
