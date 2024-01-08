@@ -1,0 +1,7 @@
+Running: xsim.dir/sabiraci_tb_behav/xsimk.exe -simmode gui -wdb sabiraci_tb_behav.wdb -simrunnum 0 -socket 52267
+Design successfully loaded
+Design Loading Memory Usage: 7060 KB (Peak: 7060 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 15572 KB (Peak: 15572 KB)
+Simulation CPU Usage: 264 ms

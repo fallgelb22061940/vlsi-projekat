@@ -42,6 +42,8 @@ begin
                 next_state<=kumulativni;
             elsif kum_complete='1'then
                 next_state<=slika;
+            elsif kraj='1'then
+                next_state<=idle;
             else
                 next_state<=state_reg;
             end if;

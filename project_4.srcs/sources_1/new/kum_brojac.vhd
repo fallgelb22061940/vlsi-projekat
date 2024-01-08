@@ -10,7 +10,7 @@ entity counter_8bit is
     );
 end counter_8bit;
 architecture Behavioral of counter_8bit is
-    signal counter:unsigned(7 downto 0);
+    signal counter:unsigned(7 downto 0):=(others=>'0');
 begin
     process(clk)is
     begin

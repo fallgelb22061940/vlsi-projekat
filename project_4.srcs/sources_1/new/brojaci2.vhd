@@ -6,12 +6,9 @@ entity brojaci is
     port(
         input:in std_logic_vector(103 downto 0);
         output:out std_logic_vector(103 downto 0)
-        --hist_complete:out std_logic:='0';
-        --clk:in std_logic
     );
 end brojaci;
 architecture Behavioral of brojaci is
-    signal counting:unsigned(12 downto 0);
 begin
     counter:for i in 0 to 7 generate
         brojac:entity work.inkrementer(Behavioral)

@@ -4,6 +4,7 @@ entity final is
     port(
         clk:in std_logic;
         start:in std_logic;
+        output:out std_logic_vector(63 downto 0);
         reset:in std_logic
     );
 end final;
@@ -38,6 +39,7 @@ architecture Structural of final is
             start_kum:in std_logic;
             kum_complete:out std_logic;
             kraj:out std_logic;
+            output:out std_logic_vector(63 downto 0);
             start_slika:in std_logic
         );
     end component;
@@ -61,6 +63,7 @@ begin
         hist_complete=>hist_complete,
         start_kum=>start_kum,
         kum_complete=>kum_complete,
+        output=>output,
         kraj=>kraj,
         start_slika=>start_slika
     );

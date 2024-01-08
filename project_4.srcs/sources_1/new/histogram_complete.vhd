@@ -10,6 +10,7 @@ entity histogram_complete is
         start_kum:in std_logic;
         kum_complete:out std_logic;
         kraj:out std_logic;
+        output:out std_logic_vector(63 downto 0);
         start_slika:in std_logic
     );
 end histogram_complete;
@@ -120,8 +121,9 @@ begin
             dina2<=inkrementer_data;
         end if;
     end process;
-    write_2<=not histogram_complete and start_kum and not start_slika;
+    write_2<=(not histogram_complete and start_kum) or read_picture;
     kum_rezultat<="000"&output_kumul(16 downto 7);
+    output<=adresa2;
     klamp:klamper port map(
         input=>kum_rezultat,
         output=>kum_rezultat2

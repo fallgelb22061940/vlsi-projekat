@@ -10,7 +10,7 @@ entity counter_13bit is
     );
 end counter_13bit;
 architecture Behavioral of counter_13bit is
-    signal counter:unsigned(12 downto 0);
+    signal counter:unsigned(12 downto 0):=(others=>'0');
 begin
     process(clk)is
     begin

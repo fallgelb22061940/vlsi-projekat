@@ -12,12 +12,12 @@ entity sabiraci is
     );
 end sabiraci;
 architecture Behavioral of sabiraci is
-    signal signal1:std_logic_vector(67 downto 0);
-    signal signal2:std_logic_vector(33 downto 0);
-    signal signal3:std_logic_vector(16 downto 0);
-    signal signal4:std_logic_vector(16 downto 0);
-    signal output_signal:std_logic_vector(16 downto 0);
-    signal counter:std_logic_vector(7 downto 0);
+    signal signal1:std_logic_vector(67 downto 0):=(others=>'0');
+    signal signal2:std_logic_vector(33 downto 0):=(others=>'0');
+    signal signal3:std_logic_vector(16 downto 0):=(others=>'0');
+    signal signal4:std_logic_vector(16 downto 0):=(others=>'0');
+    signal output_signal:std_logic_vector(16 downto 0):=(others=>'0');
+    signal counter:std_logic_vector(7 downto 0):=(others=>'0');
 begin
     sabiraci1:for i in 0 to 3 generate
         sabirac1:entity work.sabirac(Behavioral)
