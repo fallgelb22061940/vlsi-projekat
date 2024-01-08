@@ -5,15 +5,12 @@ entity histogram_complete is
     port(
         clk:in std_logic;
         read_picture:in std_logic;
-        input_addr:in std_logic_vector(12 downto 0);
         read_pic_complete:out std_logic;
         hist_complete:out std_logic;
-        --hist_start:in std_logic;
-        in_data:in std_logic_vector(63 downto 0);
         start_kum:in std_logic;
         kum_complete:out std_logic;
+        kraj:out std_logic;
         start_slika:in std_logic
-        --output:out std_logic_vector(12 downto 0)
     );
 end histogram_complete;
 architecture Behavioral of histogram_complete is
@@ -35,6 +32,7 @@ architecture Behavioral of histogram_complete is
     signal izlaz_hist_inkrementer:std_logic_vector(12 downto 0);
     signal kum_gotov:std_logic;
     signal start_kum_tmp:std_logic;
+    signal input_address:std_logic_vector(12 downto 0);
     component klamper is
         port(
             input:in std_logic_vector(12 downto 0);
@@ -106,9 +104,9 @@ architecture Behavioral of histogram_complete is
         );
     end component;
 begin
-    process(start_kum)is
+    process(start_kum,start_slika)is
     begin
-        if start_kum='1'then
+        if start_kum='1'and start_slika='0'then
             input_2<=kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output;
         else
             input_2<=adresa2;
@@ -130,16 +128,16 @@ begin
     );
     adresa:counter_13bit port map(
         clk=>clk,
-        in_signal=>read_picture,
+        in_signal=>read_picture or start_slika,
         out_signal=>read_pic_complete,
         output=>adresa1
     );
     slika:im_ram_inst_example port map(
         clk=>clk,
-        addra=>input_addr,
+        addra=>adresa1,
         addrb=>adresa1,
         doutb=>adresa2,
-        dina=>in_data,
+        dina=>output_signal(98 downto 91)&output_signal(85 downto 78)&output_signal(72 downto 65)&output_signal(59 downto 52)&output_signal(46 downto 39)&output_signal(33 downto 26)&output_signal(20 downto 13)&output_signal(7 downto 0),
         enb=>'1',
         wea=>start_slika,
         rstb=>'0',
