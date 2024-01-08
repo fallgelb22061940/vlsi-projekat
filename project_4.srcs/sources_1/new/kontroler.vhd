@@ -11,6 +11,7 @@ entity kontroler is
         start_kum:out std_logic;
         kum_complete:in std_logic;
         start_slika:out std_logic;
+        kraj:in std_logic;
         reset:in std_logic
     );
 end kontroler;

@@ -13,7 +13,7 @@ entity histogram_complete is
         start_slika:in std_logic
     );
 end histogram_complete;
-architecture Behavioral of histogram_complete is
+architecture Structural of histogram_complete is
     signal adresa1:std_logic_vector(12 downto 0);
     signal adresa2:std_logic_vector(63 downto 0);
     signal inkrementer_data:std_logic_vector(103 downto 0);
@@ -193,4 +193,4 @@ begin
         kum_complete=>kum_complete,
         output=>output_kumul
     );
-end Behavioral;
+end Structural;
