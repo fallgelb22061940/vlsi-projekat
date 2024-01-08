@@ -35,6 +35,7 @@ architecture Structural of histogram_complete is
     signal start_kum_tmp:std_logic;
     signal input_address:std_logic_vector(12 downto 0);
     signal write_address:std_logic_vector(63 downto 0);
+    signal histogram_complete_tmp:std_logic;
     component klamper is
         port(
             input:in std_logic_vector(12 downto 0);
@@ -133,6 +134,11 @@ begin
             end if;
         end if;
     end process;
+    reg5:registar_1bit port map(
+        input=>histogram_complete_tmp,
+        output=>histogram_complete,
+        clk=>clk
+    );
     write_2<=(not histogram_complete and start_kum) or read_picture;
     kum_rezultat<="000"&output_kumul(16 downto 7);
     --output<=adresa2;
@@ -190,7 +196,7 @@ begin
     );
     hist_count:counter_13bit port map(
         in_signal=>hist_start,
-        out_signal=>histogram_complete,
+        out_signal=>histogram_complete_tmp,
         clk=>clk,
         output=>open
     );
