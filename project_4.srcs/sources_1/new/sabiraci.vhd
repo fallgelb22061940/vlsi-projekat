@@ -6,19 +6,41 @@ entity sabiraci is
     port(
         input:in std_logic_vector(103 downto 0);
         clk:in std_logic;
-        output:out std_logic_vector(16 downto 0);
+        output:out std_logic_vector(16 downto 0):=(others=>'0');
         kum_complete:out std_logic;
         start_kum:in std_logic
     );
 end sabiraci;
 architecture Behavioral of sabiraci is
-    signal signal1:std_logic_vector(67 downto 0):=(others=>'0');
-    signal signal2:std_logic_vector(33 downto 0):=(others=>'0');
-    signal signal3:std_logic_vector(16 downto 0):=(others=>'0');
-    signal signal4:std_logic_vector(16 downto 0):=(others=>'0');
+    signal signal1:std_logic_vector(67 downto 0);
+    signal signal2:std_logic_vector(33 downto 0);
+    signal signal3:std_logic_vector(16 downto 0);
+    signal signal4:std_logic_vector(16 downto 0);
+    signal signal5:std_logic_vector(16 downto 0);
     signal output_signal:std_logic_vector(16 downto 0):=(others=>'0');
     signal counter:std_logic_vector(7 downto 0):=(others=>'0');
+    signal start_kum_edge:std_logic;
+    component edge_detector is
+        port(
+            clk:in std_logic;
+            in_signal:in std_logic;
+            edge:out std_logic
+        );
+    end component;
 begin
+    diferencijator:edge_detector port map(
+        clk=>clk,
+        in_signal=>start_kum,
+        edge=>start_kum_edge
+    );
+    process(start_kum_edge)is
+    begin
+        if start_kum_edge='1'then
+            signal5<=(others=>'0');
+        else
+            signal5<=output_signal;
+        end if;
+    end process;
     sabiraci1:for i in 0 to 3 generate
         sabirac1:entity work.sabirac(Behavioral)
             port map(
