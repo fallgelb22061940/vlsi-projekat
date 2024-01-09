@@ -21,7 +21,7 @@ architecture Structural of histogram_complete is
     signal output_signal:std_logic_vector(103 downto 0);
     signal input_2:std_logic_vector(63 downto 0);
     signal kum_brojac_output:std_logic_vector(7 downto 0);
-    signal write_2:std_logic;
+    signal write_2_tmp:std_logic;
     signal output_kumul:std_logic_vector(16 downto 0);
     signal dina2:std_logic_vector(103 downto 0);
     signal histogram_complete:std_logic;
@@ -34,8 +34,15 @@ architecture Structural of histogram_complete is
     signal kum_gotov:std_logic;
     signal start_kum_tmp:std_logic;
     signal input_address:std_logic_vector(12 downto 0);
-    signal write_address:std_logic_vector(63 downto 0);
     signal histogram_complete_tmp:std_logic;
+    signal input_3:std_logic_vector(63 downto 0);
+    signal input_4:std_logic_vector(63 downto 0);
+    signal input_5:std_logic_vector(63 downto 0);
+    signal histogram_complete_tmp2:std_logic;
+    signal write_2:std_logic;
+    signal hist_start_tmp2:std_logic;
+    signal hist_start_tmp3:std_logic;
+    signal histogram_complete_tmp3:std_logic;
     component klamper is
         port(
             input:in std_logic_vector(12 downto 0);
@@ -136,10 +143,25 @@ begin
     end process;
     reg5:registar_1bit port map(
         input=>histogram_complete_tmp,
+        output=>histogram_complete_tmp2,
+        clk=>clk
+    );
+    reg6:registar_1bit port map(
+        input=>histogram_complete_tmp3,
         output=>histogram_complete,
         clk=>clk
     );
-    write_2<=(not histogram_complete and start_kum) or hist_start;
+    reg10:registar_1bit port map(
+        input=>histogram_complete_tmp2,
+        output=>histogram_complete_tmp3,
+        clk=>clk
+    );
+    write_2_tmp<=(not histogram_complete and start_kum) or hist_start;
+    reg8:registar_1bit port map(
+        input=>write_2_tmp,
+        output=>write_2,
+        clk=>clk
+    );
     kum_rezultat<="000"&output_kumul(16 downto 7);
     --output<=adresa2;
     klamp:klamper port map(
@@ -165,7 +187,7 @@ begin
     );
     histogram:hist_ram port map(
         clk=>clk,
-        addra=>input_2,
+        addra=>input_3,
         addrb=>input_2,
         doutb=>output_signal,
         dina=>dina2,
@@ -175,9 +197,14 @@ begin
         regceb=>'1'
     );
     reg1:registar_1bit port map(
+        input=>hist_start_tmp2,
+        clk=>clk,
+        output=>hist_start_tmp3
+    );
+    reg7:registar_1bit port map(
         input=>hist_start_tmp,
         clk=>clk,
-        output=>hist_start
+        output=>hist_start_tmp2
     );
     reg2:registar_1bit port map(
         input=>read_picture,
@@ -192,7 +219,12 @@ begin
     reg4:registar_8bit port map(
         clk=>clk,
         input=>input_2,
-        output=>write_address
+        output=>input_3
+    );
+    reg9:registar_1bit port map(
+        clk=>clk,
+        input=>hist_start_tmp3,
+        output=>hist_start
     );
     hist_count:counter_13bit port map(
         in_signal=>hist_start,
