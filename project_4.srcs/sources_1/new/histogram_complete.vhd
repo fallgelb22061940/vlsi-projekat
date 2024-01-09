@@ -10,7 +10,7 @@ entity histogram_complete is
         start_kum:in std_logic;
         kum_complete:out std_logic:='0';
         kraj:out std_logic:='0';
-        output:out std_logic_vector(63 downto 0);
+        --output:out std_logic_vector(63 downto 0);
         start_slika:in std_logic
     );
 end histogram_complete;
@@ -139,7 +139,7 @@ begin
         output=>histogram_complete,
         clk=>clk
     );
-    write_2<=(not histogram_complete and start_kum) or read_picture;
+    write_2<=(not histogram_complete and start_kum) or hist_start;
     kum_rezultat<="000"&output_kumul(16 downto 7);
     --output<=adresa2;
     klamp:klamper port map(
@@ -165,7 +165,7 @@ begin
     );
     histogram:hist_ram port map(
         clk=>clk,
-        addra=>write_address,
+        addra=>input_2,
         addrb=>input_2,
         doutb=>output_signal,
         dina=>dina2,
