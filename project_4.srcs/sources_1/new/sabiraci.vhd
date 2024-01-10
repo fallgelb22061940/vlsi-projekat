@@ -36,9 +36,9 @@ begin
     process(start_kum_edge)is
     begin
         if start_kum_edge='1'then
-            signal5<=(others=>'0');
+            output_signal<=(others=>'0');
         else
-            signal5<=output_signal;
+            output_signal<=signal5;
         end if;
     end process;
     sabiraci1:for i in 0 to 3 generate
@@ -46,6 +46,7 @@ begin
             port map(
                 ulaz1=>"0000"&input((2*i+1)*13+12 downto (2*i+1)*13),
                 ulaz2=>"0000"&input(2*i*13+12 downto 2*i*13),
+                enable=>start_kum,
                 izlaz=>signal1(i*17+16 downto i*17)
             );
      end generate;
@@ -54,6 +55,7 @@ begin
             port map(
                 ulaz1=>signal1((2*i+1)*17+16 downto (2*i+1)*17),
                 ulaz2=>signal1(2*i*17+16 downto 2*i*17),
+                enable=>start_kum,
                 izlaz=>signal2(i*17+16 downto i*17)
             );
      end generate;
@@ -62,6 +64,7 @@ begin
             port map(
                 ulaz1=>signal2((2*i+1)*17+16 downto (2*i+1)*17),
                 ulaz2=>signal2(2*i*17+16 downto 2*i*17),
+                enable=>start_kum,
                 izlaz=>signal3(i*17+16 downto i*17)
             );
      end generate;
@@ -70,7 +73,8 @@ begin
             port map(
                 ulaz1=>signal3,
                 ulaz2=>signal4,
-                izlaz=>output_signal
+                enable=>start_kum,
+                izlaz=>signal5
             );
      end generate;
      registar:for i in 0 to 0 generate
@@ -78,6 +82,7 @@ begin
             port map(
                 clk=>clk,
                 output=>signal4,
+                start_kum=>start_kum,
                 input=>output_signal
             );
      end generate;

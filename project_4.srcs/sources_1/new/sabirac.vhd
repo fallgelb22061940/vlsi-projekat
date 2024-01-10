@@ -5,10 +5,18 @@ entity sabirac is
     port(
         ulaz1:in std_logic_vector(16 downto 0);
         ulaz2:in std_logic_vector(16 downto 0);
-        izlaz:out std_logic_vector(16 downto 0)
+        izlaz:out std_logic_vector(16 downto 0);
+        enable:in std_logic
     );
 end sabirac;
 architecture Behavioral of sabirac is
 begin
-    izlaz<=std_logic_vector(unsigned(ulaz1)+unsigned(ulaz2));
+    process(enable)is
+    begin
+        if enable='1'then
+            izlaz<=std_logic_vector(unsigned(ulaz1)+unsigned(ulaz2));
+        else
+            izlaz<=(others=>'0');
+        end if;
+    end process;
 end Behavioral;

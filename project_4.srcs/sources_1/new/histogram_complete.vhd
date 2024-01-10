@@ -43,6 +43,7 @@ architecture Structural of histogram_complete is
     signal hist_start_tmp2:std_logic;
     signal hist_start_tmp3:std_logic;
     signal histogram_complete_tmp3:std_logic;
+    signal start_kum1:std_logic;
     component klamper is
         port(
             input:in std_logic_vector(12 downto 0);
@@ -123,21 +124,23 @@ architecture Structural of histogram_complete is
 begin
     adrese2:process(clk)is
     begin
-    if rising_edge(clk)then
-        if start_kum='1'and start_slika='0'then
-            input_2<=kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output;
-        else
-            input_2<=adresa2;
-        end if;
+        if rising_edge(clk)then
+            if start_kum1='1'and start_slika='0'then
+                input_2<=kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output;
+            else
+                input_2<=adresa2;
+            end if;
         end if;
     end process adrese2;
     process(clk)is
     begin
         if rising_edge(clk)then
-            if start_kum='0' then
+            if histogram_complete/='1' then
                 dina2<=inkrementer_data;
-            else
+            elsif start_kum1='1'then
                 dina2<=kum_rezultat2&kum_rezultat2&kum_rezultat2&kum_rezultat2&kum_rezultat2&kum_rezultat2&kum_rezultat2&kum_rezultat2;
+            else
+                dina2<=(others=>'0');
             end if;
         end if;
     end process;
@@ -156,7 +159,7 @@ begin
         output=>histogram_complete_tmp3,
         clk=>clk
     );
-    write_2_tmp<=(not histogram_complete and start_kum) or hist_start;
+    write_2_tmp<=( start_kum1) or hist_start;
     reg8:registar_1bit port map(
         input=>write_2_tmp,
         output=>write_2,
@@ -211,11 +214,11 @@ begin
         clk=>clk,
         output=>hist_start_tmp
     );
-    reg3:registar_1bit port map(
-        clk=>clk,
-        input=>start_kum,
-        output=>start_kum_tmp
-    );
+--    reg3:registar_1bit port map(
+--        clk=>clk,
+--        input=>start_kum1,
+--        output=>start_kum_tmp
+--    );
     reg4:registar_8bit port map(
         clk=>clk,
         input=>input_2,
@@ -236,9 +239,14 @@ begin
         input=>output_signal,
         output=>inkrementer_data
     );
+    reg11:registar_1bit port map(
+        input=>start_kum,
+        output=>start_kum1,
+        clk=>clk
+    );
     hist_complete<=histogram_complete;
     kum_brojac:counter_8bit port map(
-        in_signal=>start_kum,
+        in_signal=>start_kum1,
         clk=>clk,
         out_signal=>kum_gotov,
         output=>kum_brojac_output
@@ -246,7 +254,7 @@ begin
     sabiraci_kumul:sabiraci port map(
         input=>output_signal,
         clk=>clk,
-        start_kum=>start_kum_tmp,
+        start_kum=>start_kum1,
         kum_complete=>kum_complete,
         output=>output_kumul
     );
