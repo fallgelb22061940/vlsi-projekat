@@ -11,7 +11,7 @@ entity sabirac is
 end sabirac;
 architecture Behavioral of sabirac is
 begin
-    process(enable)is
+    process(enable,ulaz1,ulaz2)is
     begin
         if enable='1'then
             izlaz<=std_logic_vector(unsigned(ulaz1)+unsigned(ulaz2));

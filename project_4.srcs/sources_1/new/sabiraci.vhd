@@ -33,14 +33,16 @@ begin
         in_signal=>start_kum,
         edge=>start_kum_edge
     );
-    process(start_kum_edge)is
-    begin
-        if start_kum_edge='1'then
-            output_signal<=(others=>'0');
-        else
-            output_signal<=signal5;
-        end if;
-    end process;
+--    process(clk)is
+--    begin
+--        if rising_edge(clk)then
+--            if start_kum_edge='1'then
+--                signal5<=(others=>'0');
+--            else
+--                output_signal<=signal5;
+--            end if;
+--        end if;
+--    end process;
     sabiraci1:for i in 0 to 3 generate
         sabirac1:entity work.sabirac(Behavioral)
             port map(
@@ -74,7 +76,7 @@ begin
                 ulaz1=>signal3,
                 ulaz2=>signal4,
                 enable=>start_kum,
-                izlaz=>signal5
+                izlaz=>output_signal
             );
      end generate;
      registar:for i in 0 to 0 generate

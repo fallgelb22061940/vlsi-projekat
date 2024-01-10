@@ -26,6 +26,7 @@ vhdl xil_defaultlib  \
 "../../../../project_4.srcs/sim_1/new/inkrementer_tb.vhd" \
 "../../../../project_4.srcs/sim_1/new/hist_ram_tb.vhd" \
 "../../../../project_4.srcs/sim_1/imports/edge_detector_tb.vhd" \
+"../../../../project_4.srcs/sim_1/new/sabirac_tb.vhd" \
 
 # Do not sort compile order
 nosort

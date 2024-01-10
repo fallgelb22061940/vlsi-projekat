@@ -35,8 +35,13 @@ begin
 	   input_data<=(others => '0');
        start_kum_signal<='0';
 	   input_data<=std_logic_vector(to_unsigned(798,13))&std_logic_vector(to_unsigned(798,13))&std_logic_vector(to_unsigned(798,13))&std_logic_vector(to_unsigned(798,13))&std_logic_vector(to_unsigned(798,13))&std_logic_vector(to_unsigned(798,13))&std_logic_vector(to_unsigned(798,13))&std_logic_vector(to_unsigned(798,13));
-	   wait for 10 ns;
+	   wait for 20 ns;
+	   input_data<=std_logic_vector(to_unsigned(798,13))&std_logic_vector(to_unsigned(798,13))&std_logic_vector(to_unsigned(456,13))&std_logic_vector(to_unsigned(798,13))&std_logic_vector(to_unsigned(456,13))&std_logic_vector(to_unsigned(798,13))&std_logic_vector(to_unsigned(456,13))&std_logic_vector(to_unsigned(456,13));
 	   start_kum_signal<='1';
+	   wait for 60 ns;
+	   input_data<=std_logic_vector(to_unsigned(2510,13))&std_logic_vector(to_unsigned(2510,13))&std_logic_vector(to_unsigned(456,13))&std_logic_vector(to_unsigned(2510,13))&std_logic_vector(to_unsigned(2510,13))&std_logic_vector(to_unsigned(798,13))&std_logic_vector(to_unsigned(456,13))&std_logic_vector(to_unsigned(456,13));
+	   wait for 100 ns;
+	   start_kum_signal<='0';
 	   wait for 8000 ns;
 	   wait;
 	end process;
