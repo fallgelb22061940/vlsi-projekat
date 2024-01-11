@@ -9,7 +9,8 @@ entity histogram_complete is
         hist_complete:out std_logic:='0';
         start_kum:in std_logic;
         kum_complete:out std_logic:='0';
-        kraj:out std_logic:='0';
+        kraj:out std_logic;
+        reset:in std_logic;
         --output:out std_logic_vector(63 downto 0);
         start_slika:in std_logic
     );
@@ -50,6 +51,11 @@ architecture Structural of histogram_complete is
     signal start_kum3:std_logic;
     signal start_adder2:std_logic;
     signal start_adder3:std_logic;
+    signal start_slika_edge:std_logic;
+    signal start_slika_tmp:std_logic;
+    signal adresa1tmp:std_logic_vector(12 downto 0);
+    signal read_pic_complete_tmp:std_logic;
+    signal kraj_tmp:std_logic;
     component klamper is
         port(
             input:in std_logic_vector(12 downto 0);
@@ -69,10 +75,18 @@ architecture Structural of histogram_complete is
             doutb:out std_logic_vector(103 downto 0) --output data
         );
     end component;
+    component edge_detector is
+        port ( 
+            clk : in std_logic;
+            in_signal : in std_logic;
+            edge : out std_logic
+        );
+    end component;
     component counter_13bit is
         port(
             clk:in std_logic;
             in_signal:in std_logic;
+            reset:in std_logic;
             output:out std_logic_vector(12 downto 0);
             out_signal:out std_logic
         );
@@ -120,6 +134,13 @@ architecture Structural of histogram_complete is
             output:out std_logic
         );
     end component;
+    component registar_13bit is
+        port(
+            input:in std_logic_vector(12 downto 0);
+            output:out std_logic_vector(12 downto 0);
+            clk:in std_logic
+        );
+    end component;
     component registar_8bit is
         port(
             input:in std_logic_vector(63 downto 0);
@@ -131,7 +152,7 @@ begin
     adrese2:process(clk)is
     begin
         if rising_edge(clk)then
-            if start_kum2='1'and start_slika='0'then
+            if start_kum2='1'and start_slika_tmp='0'then
                 input_2<=kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output;
             else
                 input_2<=adresa2;
@@ -165,13 +186,13 @@ begin
         output=>histogram_complete_tmp3,
         clk=>clk
     );
-    write_2_tmp<=( start_kum2 ) or hist_start;
+    write_2_tmp<=(start_kum2 or hist_start)and not start_slika_tmp;
     reg8:registar_1bit port map(
         input=>write_2_tmp,
         output=>write_2,
         clk=>clk
     );
-    kum_rezultat<="000"&output_kumul(16 downto 7);
+    kum_rezultat<="0000"&output_kumul(16 downto 8);
     --output<=adresa2;
     klamp:klamper port map(
         input=>kum_rezultat,
@@ -179,20 +200,41 @@ begin
     );
     adresa:counter_13bit port map(
         clk=>clk,
-        in_signal=>read_picture or start_slika,
-        out_signal=>read_pic_complete,
+        in_signal=>read_picture or start_slika_tmp,
+        reset=>reset or start_slika_edge,
+        out_signal=>read_pic_complete_tmp,
         output=>adresa1
     );
+    read_pic_complete<=read_pic_complete_tmp;
+    process(read_pic_complete_tmp,read_picture)is
+    begin
+        if read_pic_complete_tmp='1'and histogram_complete='1'then
+            kraj_tmp<='1';
+        else
+            kraj_tmp<='0';
+        end if;
+    end process;
+    reg16:registar_1bit port map(
+        clk=>clk,
+        input=>start_slika,
+        output=>start_slika_tmp
+    );
+    kraj<=kraj_tmp;
     slika:im_ram_inst_example port map(
         clk=>clk,
-        addra=>adresa1,
+        addra=>adresa1tmp,
         addrb=>adresa1,
         doutb=>adresa2,
         dina=>output_signal(98 downto 91)&output_signal(85 downto 78)&output_signal(72 downto 65)&output_signal(59 downto 52)&output_signal(46 downto 39)&output_signal(33 downto 26)&output_signal(20 downto 13)&output_signal(7 downto 0),
         enb=>'1',
-        wea=>start_slika,
+        wea=>start_slika_tmp and not kraj_tmp,
         rstb=>'0',
         regceb=>'1'
+    );
+    diferencijator:edge_detector port map(
+        clk=>clk,
+        in_signal=>start_slika_tmp,
+        edge=>start_slika_edge
     );
     histogram:hist_ram port map(
         clk=>clk,
@@ -255,7 +297,7 @@ begin
         input=>start_kum3,
         output=>start_adder
     );
-    reg16:registar_1bit port map(
+    reg18:registar_1bit port map(
         clk=>clk,
         input=>start_adder,
         output=>start_adder2
@@ -268,6 +310,7 @@ begin
     hist_count:counter_13bit port map(
         in_signal=>hist_start,
         out_signal=>histogram_complete_tmp,
+        reset=>reset,
         clk=>clk,
         output=>open
     );
@@ -278,6 +321,11 @@ begin
     reg11:registar_1bit port map(
         input=>start_kum,
         output=>start_kum1,
+        clk=>clk
+    );
+    hist19:registar_13bit port map(
+        input=>adresa1,
+        output=>adresa1tmp,
         clk=>clk
     );
     hist_complete<=histogram_complete;

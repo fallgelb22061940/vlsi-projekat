@@ -39,6 +39,7 @@ architecture Structural of final is
             start_kum:in std_logic;
             kum_complete:out std_logic;
             kraj:out std_logic;
+            reset:in std_logic;
             --output:out std_logic_vector(63 downto 0);
             start_slika:in std_logic
         );
@@ -63,6 +64,7 @@ begin
         hist_complete=>hist_complete,
         start_kum=>start_kum,
         kum_complete=>kum_complete,
+        reset=>reset,
         --output=>output,
         kraj=>kraj,
         start_slika=>start_slika

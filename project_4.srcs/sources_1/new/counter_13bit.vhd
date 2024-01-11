@@ -6,6 +6,7 @@ entity counter_13bit is
         clk:in std_logic;
         in_signal:in std_logic;
         output:out std_logic_vector(12 downto 0);
+        reset:in std_logic;
         out_signal:out std_logic
     );
 end counter_13bit;
@@ -16,11 +17,16 @@ begin
     begin
         if rising_edge(clk)then
             if in_signal='1'then
-                if counter=8191 then
-                    counter<=counter;
-                    out_signal<='1';
+                if reset='1'then
+                    out_signal<='0';
+                    counter<=(others=>'0');
                 else
-                    counter<=counter+1;
+                    if counter=8191 then
+                        counter<=counter;
+                        out_signal<='1';
+                    else
+                        counter<=counter+1;
+                    end if;
                 end if;
             else
                 counter<=counter;
