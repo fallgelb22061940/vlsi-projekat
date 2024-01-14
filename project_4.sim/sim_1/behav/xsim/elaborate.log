@@ -30,6 +30,7 @@ Compiling architecture behavioral of entity xil_defaultlib.edge_detector [edge_d
 Compiling architecture behavioral of entity xil_defaultlib.hist_ram_block [\hist_ram_block(1,16)(1,0)\]
 Compiling architecture rtl of entity xil_defaultlib.hist_ram [hist_ram_default]
 Compiling architecture behavioral of entity xil_defaultlib.registar_8bit [registar_8bit_default]
+Compiling architecture behavioral of entity xil_defaultlib.registar_8bit_real [registar_8bit_real_default]
 Compiling architecture behavioral of entity xil_defaultlib.inkrementer [inkrementer_default]
 Compiling architecture behavioral of entity xil_defaultlib.brojaci [brojaci_default]
 Compiling architecture behavioral of entity xil_defaultlib.registar_13bit [registar_13bit_default]

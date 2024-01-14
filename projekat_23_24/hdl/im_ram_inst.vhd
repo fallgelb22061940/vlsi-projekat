@@ -22,14 +22,6 @@ architecture rtl of im_ram_inst_example is
     constant C_IMAGE_DIM : integer := 256;
     constant C_NUM_MEMS  : integer := 8;
     constant C_MEM_DEPTH : integer := C_IMAGE_DIM*C_IMAGE_DIM/C_NUM_MEMS;--8192
-
-    type Mem_data_array_t is array(0 to C_NUM_MEMS-1) of std_logic_vector(7 downto 0);
-    signal wr_data : Mem_data_array_t;
-    signal wr_addr : unsigned(clogb2(C_MEM_DEPTH)-1 downto 0);--unsigned 12 downto 0
-    signal wren    : std_logic_vector(C_NUM_MEMS-1 downto 0);--7 downto 0
-    signal rd_data : Mem_data_array_t;
-    signal rd_addr : unsigned(clogb2(C_MEM_DEPTH)-1 downto 0);
-    
 begin
 
     IM_MEMS: for i in 0 to C_NUM_MEMS-1 generate

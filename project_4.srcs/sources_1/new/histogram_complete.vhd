@@ -115,6 +115,9 @@ architecture Structural of histogram_complete is
     component brojaci is 
         port(
             input:in std_logic_vector(103 downto 0);
+            hist_start:in std_logic;
+            clk:in std_logic;
+            address:in std_logic_vector(63 downto 0);
             output:out std_logic_vector(103 downto 0)
         );
     end component;
@@ -316,6 +319,9 @@ begin
     );
     inkrementers:brojaci port map(
         input=>output_signal,
+        clk=>clk,
+        address=>input_3,
+        hist_start=>hist_start,
         output=>inkrementer_data
     );
     reg11:registar_1bit port map(

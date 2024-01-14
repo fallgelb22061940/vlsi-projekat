@@ -16,7 +16,6 @@ architecture Behavioral of sabiraci is
     signal signal2:std_logic_vector(33 downto 0);
     signal signal3:std_logic_vector(16 downto 0);
     signal signal4:std_logic_vector(16 downto 0);
-    signal signal5:std_logic_vector(16 downto 0);
     signal output_signal:std_logic_vector(16 downto 0):=(others=>'0');
     signal counter:std_logic_vector(7 downto 0):=(others=>'0');
     signal start_kum_edge:std_logic;
@@ -33,16 +32,6 @@ begin
         in_signal=>start_kum,
         edge=>start_kum_edge
     );
---    process(clk)is
---    begin
---        if rising_edge(clk)then
---            if start_kum_edge='1'then
---                signal5<=(others=>'0');
---            else
---                output_signal<=signal5;
---            end if;
---        end if;
---    end process;
     sabiraci1:for i in 0 to 3 generate
         sabirac1:entity work.sabirac(Behavioral)
             port map(
