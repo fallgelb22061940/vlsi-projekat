@@ -11,7 +11,7 @@ entity histogram_complete is
         kum_complete:out std_logic:='0';
         kraj:out std_logic;
         reset:in std_logic;
-        --output:out std_logic_vector(63 downto 0);
+        output:out std_logic_vector(63 downto 0);
         start_slika:in std_logic
     );
 end histogram_complete;
@@ -196,7 +196,7 @@ begin
         clk=>clk
     );
     kum_rezultat<="0000"&output_kumul(16 downto 8);
-    --output<=adresa2;
+    output<=adresa2;
     klamp:klamper port map(
         input=>kum_rezultat,
         output=>kum_rezultat2
@@ -209,7 +209,7 @@ begin
         output=>adresa1
     );
     read_pic_complete<=read_pic_complete_tmp;
-    process(read_pic_complete_tmp,read_picture)is
+    process(read_pic_complete_tmp,histogram_complete)is
     begin
         if read_pic_complete_tmp='1'and histogram_complete='1'then
             kraj_tmp<='1';

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Jan 15 21:57:17 2024
+# Process ID: 10604
+# Current directory: D:/vlsi-projekat/project_4.runs/impl_1
+# Command line: vivado.exe -log final.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source final.tcl -notrace
+# Log file: D:/vlsi-projekat/project_4.runs/impl_1/final.vdi
+# Journal file: D:/vlsi-projekat/project_4.runs/impl_1\vivado.jou
+# Running On: DESKTOP-0OT9859, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 6, Host memory: 17042 MB
+#-----------------------------------------------------------
+source final.tcl -notrace
