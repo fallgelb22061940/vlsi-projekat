@@ -21,6 +21,7 @@ vhdl xil_defaultlib  \
 "../../../../project_4.srcs/sources_1/imports/edge_detector.vhd" \
 "../../../../project_4.srcs/sources_1/new/registar_13bit.vhd" \
 "../../../../project_4.srcs/sources_1/new/registar_8bit_real.vhd" \
+"../../../../project_4.srcs/sources_1/imports/hdl/uart_tx.vhd" \
 "../../../../project_4.srcs/sim_1/new/kontroler_tb.vhd" \
 "../../../../project_4.srcs/sim_1/new/counter_13bit_tb.vhd" \
 "../../../../project_4.srcs/sim_1/imports/kumul_tb.vhd" \

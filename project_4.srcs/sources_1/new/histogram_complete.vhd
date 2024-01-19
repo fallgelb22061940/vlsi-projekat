@@ -152,19 +152,16 @@ architecture Structural of histogram_complete is
         );
     end component;
 begin
-    adrese2:process(clk)is
+    adrese2:process(start_kum2,start_slika_tmp,kum_brojac_output,adresa2)is
     begin
-        if rising_edge(clk)then
             if start_kum2='1'and start_slika_tmp='0'then
                 input_2<=kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output&kum_brojac_output;
             else
                 input_2<=adresa2;
             end if;
-        end if;
     end process adrese2;
-    process(clk)is
+    process(histogram_complete,inkrementer_data,start_kum2,kum_rezultat2)is
     begin
-        if rising_edge(clk)then
             if histogram_complete/='1' then
                 dina2<=inkrementer_data;
             elsif start_kum2='1'then
@@ -172,7 +169,6 @@ begin
             else
                 dina2<=(others=>'0');
             end if;
-        end if;
     end process;
     reg5:registar_1bit port map(
         input=>histogram_complete_tmp,
@@ -320,7 +316,7 @@ begin
     inkrementers:brojaci port map(
         input=>output_signal,
         clk=>clk,
-        address=>input_3,
+        address=>input_2,
         hist_start=>hist_start,
         output=>inkrementer_data
     );
