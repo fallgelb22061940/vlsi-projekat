@@ -316,7 +316,7 @@ begin
     inkrementers:brojaci port map(
         input=>output_signal,
         clk=>clk,
-        address=>input_2,
+        address=>input_3,
         hist_start=>hist_start,
         output=>inkrementer_data
     );
