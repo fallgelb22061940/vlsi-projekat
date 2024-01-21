@@ -15,8 +15,8 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity uart_tx is
 generic (
-	CLK_FREQ	: integer := 125;		-- Main frequency (MHz)
-	SER_FREQ	: integer := 500000		-- Baud rate (bps)
+	CLK_FREQ	: integer := 50;		-- Main frequency (MHz)
+	SER_FREQ	: integer := 115200		-- Baud rate (bps)
 );
 port (
 	-- Control

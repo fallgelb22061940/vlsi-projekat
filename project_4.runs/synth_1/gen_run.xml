@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1705352082">
-  <File Type="PA-TCL" Name="final.tcl"/>
-  <File Type="REPORTS-TCL" Name="final_reports.tcl"/>
-  <File Type="RDS-RDS" Name="final.vds"/>
-  <File Type="RDS-UTIL" Name="final_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="final_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="final.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1705877622">
+  <File Type="PA-TCL" Name="final_uart.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="final_uart_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="final_uart_reports.tcl"/>
+  <File Type="RDS-RDS" Name="final_uart.vds"/>
+  <File Type="RDS-UTIL" Name="final_uart_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="final_uart_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="final_uart.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="final_uart_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="final_uart_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/brojaci2.vhd">
@@ -136,15 +139,55 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/uart_tx.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/projekat_23_24/hdl/uart_tx.vhd"/>
+        <Attr Name="ImportTime" Val="1704385923"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/final_uart.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/button.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sender.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/uart_counter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="final"/>
+      <Option Name="TopModule" Val="final_uart"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/new/clock_constraints.xdc">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/imports/xdc/pin_constraints_pynq.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/projekat_23_24/xdc/pin_constraints_pynq.xdc"/>
+        <Attr Name="ImportTime" Val="1704385923"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>

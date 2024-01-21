@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log final.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source final.tcl
+    with args -log final_uart.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source final_uart.tcl
 
 
 
@@ -9,44 +9,53 @@
   **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
-source final.tcl -notrace
-Command: synth_design -top final -part xc7z020clg400-1
+source final_uart.tcl -notrace
+Command: synth_design -top final_uart -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 14556
+INFO: [Synth 8-7075] Helper process launched with PID 5072
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1278.496 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1278.480 ; gain = 0.000
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-9112] actual for formal port 'in_signal' is neither a static name nor a globally static expression [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:206]
-WARNING: [Synth 8-9112] actual for formal port 'reset' is neither a static name nor a globally static expression [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:207]
-WARNING: [Synth 8-9112] actual for formal port 'dina' is neither a static name nor a globally static expression [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:231]
-WARNING: [Synth 8-9112] actual for formal port 'wea' is neither a static name nor a globally static expression [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:233]
+WARNING: [Synth 8-9112] actual for formal port 'in_signal' is neither a static name nor a globally static expression [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:234]
+WARNING: [Synth 8-9112] actual for formal port 'reset' is neither a static name nor a globally static expression [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:235]
+WARNING: [Synth 8-9112] actual for formal port 'dina' is neither a static name nor a globally static expression [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:259]
+WARNING: [Synth 8-9112] actual for formal port 'wea' is neither a static name nor a globally static expression [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:261]
 WARNING: [Synth 8-9112] actual for formal port 'ulaz1' is neither a static name nor a globally static expression [D:/vlsi-projekat/project_4.srcs/sources_1/new/sabiraci.vhd:38]
 WARNING: [Synth 8-9112] actual for formal port 'ulaz2' is neither a static name nor a globally static expression [D:/vlsi-projekat/project_4.srcs/sources_1/new/sabiraci.vhd:39]
-INFO: [Synth 8-638] synthesizing module 'final' [D:/vlsi-projekat/project_4.srcs/sources_1/new/final.vhd:11]
-INFO: [Synth 8-3491] module 'kontroler' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/kontroler.vhd:4' bound to instance 'control' of component 'kontroler' [D:/vlsi-projekat/project_4.srcs/sources_1/new/final.vhd:48]
-INFO: [Synth 8-638] synthesizing module 'kontroler' [D:/vlsi-projekat/project_4.srcs/sources_1/new/kontroler.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'kontroler' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/kontroler.vhd:18]
-INFO: [Synth 8-3491] module 'histogram_complete' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:4' bound to instance 'histogram' of component 'histogram_complete' [D:/vlsi-projekat/project_4.srcs/sources_1/new/final.vhd:60]
-INFO: [Synth 8-638] synthesizing module 'histogram_complete' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:18]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg5' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:177]
+INFO: [Synth 8-638] synthesizing module 'final_uart' [D:/vlsi-projekat/project_4.srcs/sources_1/new/final_uart.vhd:14]
+INFO: [Synth 8-3491] module 'final' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/final.vhd:3' bound to instance 'histogram' of component 'final' [D:/vlsi-projekat/project_4.srcs/sources_1/new/final_uart.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'final' [D:/vlsi-projekat/project_4.srcs/sources_1/new/final.vhd:15]
+INFO: [Synth 8-3491] module 'kontroler' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/kontroler.vhd:4' bound to instance 'control' of component 'kontroler' [D:/vlsi-projekat/project_4.srcs/sources_1/new/final.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'kontroler' [D:/vlsi-projekat/project_4.srcs/sources_1/new/kontroler.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'kontroler' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/kontroler.vhd:20]
+INFO: [Synth 8-3491] module 'histogram_complete' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:4' bound to instance 'histogram' of component 'histogram_complete' [D:/vlsi-projekat/project_4.srcs/sources_1/new/final.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'histogram_complete' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:21]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg5' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:189]
 INFO: [Synth 8-638] synthesizing module 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:10]
 INFO: [Synth 8-256] done synthesizing module 'registar_1bit' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:10]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg6' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:182]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg10' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:187]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg8' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:193]
-INFO: [Synth 8-3491] module 'klamper' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/klamper.vhd:4' bound to instance 'klamp' of component 'klamper' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:200]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg6' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:194]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg10' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:199]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg8' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:205]
+INFO: [Synth 8-3491] module 'klamper' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/klamper.vhd:4' bound to instance 'klamp' of component 'klamper' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:212]
 INFO: [Synth 8-638] synthesizing module 'klamper' [D:/vlsi-projekat/project_4.srcs/sources_1/new/klamper.vhd:10]
 INFO: [Synth 8-256] done synthesizing module 'klamper' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/klamper.vhd:10]
-INFO: [Synth 8-3491] module 'counter_13bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/counter_13bit.vhd:4' bound to instance 'adresa' of component 'counter_13bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:204]
+INFO: [Synth 8-3491] module 'uart_counter' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/uart_counter.vhd:4' bound to instance 'citac' of component 'uart_counter' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:216]
+INFO: [Synth 8-638] synthesizing module 'uart_counter' [D:/vlsi-projekat/project_4.srcs/sources_1/new/uart_counter.vhd:13]
+WARNING: [Synth 8-614] signal 'load' is read in the process but is not in the sensitivity list [D:/vlsi-projekat/project_4.srcs/sources_1/new/uart_counter.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'uart_counter' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/uart_counter.vhd:13]
+WARNING: [Synth 8-614] signal 'output_addr' is read in the process but is not in the sensitivity list [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:224]
+WARNING: [Synth 8-614] signal 'adresa1' is read in the process but is not in the sensitivity list [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:224]
+INFO: [Synth 8-3491] module 'counter_13bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/counter_13bit.vhd:4' bound to instance 'adresa' of component 'counter_13bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:232]
 INFO: [Synth 8-638] synthesizing module 'counter_13bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/counter_13bit.vhd:13]
 INFO: [Synth 8-256] done synthesizing module 'counter_13bit' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/counter_13bit.vhd:13]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg16' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:220]
-INFO: [Synth 8-3491] module 'im_ram_inst_example' declared at 'D:/vlsi-projekat/projekat_23_24/hdl/im_ram_inst.vhd:6' bound to instance 'slika' of component 'im_ram_inst_example' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:226]
+WARNING: [Synth 8-614] signal 'start_slika' is read in the process but is not in the sensitivity list [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:240]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg16' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:248]
+INFO: [Synth 8-3491] module 'im_ram_inst_example' declared at 'D:/vlsi-projekat/projekat_23_24/hdl/im_ram_inst.vhd:6' bound to instance 'slika' of component 'im_ram_inst_example' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:254]
 INFO: [Synth 8-638] synthesizing module 'im_ram_inst_example' [D:/vlsi-projekat/projekat_23_24/hdl/im_ram_inst.vhd:20]
 INFO: [Synth 8-638] synthesizing module 'im_ram' [D:/vlsi-projekat/projekat_23_24/hdl/im_ram.vhd:28]
 	Parameter G_RAM_WIDTH bound to: 8 - type: integer 
@@ -97,10 +106,10 @@ INFO: [Synth 8-638] synthesizing module 'im_ram__parameterized6' [D:/vlsi-projek
 	Parameter G_RAM_INIT_FILE bound to: lenaCorrupted7.dat - type: string 
 INFO: [Synth 8-256] done synthesizing module 'im_ram__parameterized6' (0#1) [D:/vlsi-projekat/projekat_23_24/hdl/im_ram.vhd:28]
 INFO: [Synth 8-256] done synthesizing module 'im_ram_inst_example' (0#1) [D:/vlsi-projekat/projekat_23_24/hdl/im_ram_inst.vhd:20]
-INFO: [Synth 8-3491] module 'edge_detector' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/imports/edge_detector.vhd:8' bound to instance 'diferencijator' of component 'edge_detector' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:237]
+INFO: [Synth 8-3491] module 'edge_detector' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/imports/edge_detector.vhd:8' bound to instance 'diferencijator' of component 'edge_detector' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:265]
 INFO: [Synth 8-638] synthesizing module 'edge_detector' [D:/vlsi-projekat/project_4.srcs/sources_1/imports/edge_detector.vhd:16]
 INFO: [Synth 8-256] done synthesizing module 'edge_detector' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/imports/edge_detector.vhd:16]
-INFO: [Synth 8-3491] module 'hist_ram' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/hist_ram.vhd:7' bound to instance 'histogram' of component 'hist_ram' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:242]
+INFO: [Synth 8-3491] module 'hist_ram' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/hist_ram.vhd:7' bound to instance 'histogram' of component 'hist_ram' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:270]
 INFO: [Synth 8-638] synthesizing module 'hist_ram' [D:/vlsi-projekat/project_4.srcs/sources_1/new/hist_ram.vhd:21]
 INFO: [Synth 8-638] synthesizing module 'hist_ram_block' [D:/vlsi-projekat/project_4.srcs/sources_1/new/hist_ram_block.vhd:28]
 	Parameter G_RAM_WIDTH bound to: 13 - type: integer 
@@ -108,22 +117,22 @@ INFO: [Synth 8-638] synthesizing module 'hist_ram_block' [D:/vlsi-projekat/proje
 	Parameter G_RAM_PERFORMANCE bound to: HIGH_PERFORMANCE - type: string 
 INFO: [Synth 8-256] done synthesizing module 'hist_ram_block' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/hist_ram_block.vhd:28]
 INFO: [Synth 8-256] done synthesizing module 'hist_ram' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/hist_ram.vhd:21]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg1' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:253]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg7' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:258]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg2' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:263]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg12' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:268]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg3' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:273]
-INFO: [Synth 8-3491] module 'registar_8bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_8bit.vhd:3' bound to instance 'reg4' of component 'registar_8bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:278]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg1' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:281]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg7' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:286]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg2' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:291]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg12' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:296]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg3' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:301]
+INFO: [Synth 8-3491] module 'registar_8bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_8bit.vhd:3' bound to instance 'reg4' of component 'registar_8bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:306]
 INFO: [Synth 8-638] synthesizing module 'registar_8bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_8bit.vhd:10]
 INFO: [Synth 8-256] done synthesizing module 'registar_8bit' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_8bit.vhd:10]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg9' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:283]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg13' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:288]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg14' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:293]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg15' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:298]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg18' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:303]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg17' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:308]
-INFO: [Synth 8-3491] module 'counter_13bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/counter_13bit.vhd:4' bound to instance 'hist_count' of component 'counter_13bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:313]
-INFO: [Synth 8-3491] module 'brojaci' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/brojaci2.vhd:5' bound to instance 'inkrementers' of component 'brojaci' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:320]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg9' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:311]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg13' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:316]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg14' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:321]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg15' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:326]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg18' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:331]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg17' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:336]
+INFO: [Synth 8-3491] module 'counter_13bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/counter_13bit.vhd:4' bound to instance 'hist_count' of component 'counter_13bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:341]
+INFO: [Synth 8-3491] module 'brojaci' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/brojaci2.vhd:5' bound to instance 'inkrementers' of component 'brojaci' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:348]
 INFO: [Synth 8-638] synthesizing module 'brojaci' [D:/vlsi-projekat/project_4.srcs/sources_1/new/brojaci2.vhd:14]
 INFO: [Synth 8-638] synthesizing module 'inkrementer' [D:/vlsi-projekat/project_4.srcs/sources_1/new/brojaci.vhd:13]
 INFO: [Synth 8-3491] module 'registar_8bit_real' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_8bit_real.vhd:3' bound to instance 'reg1' of component 'registar_8bit_real' [D:/vlsi-projekat/project_4.srcs/sources_1/new/brojaci.vhd:42]
@@ -133,14 +142,14 @@ INFO: [Synth 8-3491] module 'registar_8bit_real' declared at 'D:/vlsi-projekat/p
 INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg3' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/brojaci.vhd:52]
 INFO: [Synth 8-256] done synthesizing module 'inkrementer' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/brojaci.vhd:13]
 INFO: [Synth 8-256] done synthesizing module 'brojaci' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/brojaci2.vhd:14]
-INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg11' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:327]
-INFO: [Synth 8-3491] module 'registar_13bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_13bit.vhd:3' bound to instance 'hist19' of component 'registar_13bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:332]
+INFO: [Synth 8-3491] module 'registar_1bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_1bit.vhd:3' bound to instance 'reg11' of component 'registar_1bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:355]
+INFO: [Synth 8-3491] module 'registar_13bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_13bit.vhd:3' bound to instance 'hist19' of component 'registar_13bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:360]
 INFO: [Synth 8-638] synthesizing module 'registar_13bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_13bit.vhd:10]
 INFO: [Synth 8-256] done synthesizing module 'registar_13bit' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/registar_13bit.vhd:10]
-INFO: [Synth 8-3491] module 'counter_8bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/kum_brojac.vhd:4' bound to instance 'kum_brojac' of component 'counter_8bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:338]
+INFO: [Synth 8-3491] module 'counter_8bit' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/kum_brojac.vhd:4' bound to instance 'kum_brojac' of component 'counter_8bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:366]
 INFO: [Synth 8-638] synthesizing module 'counter_8bit' [D:/vlsi-projekat/project_4.srcs/sources_1/new/kum_brojac.vhd:12]
 INFO: [Synth 8-256] done synthesizing module 'counter_8bit' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/kum_brojac.vhd:12]
-INFO: [Synth 8-3491] module 'sabiraci' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/sabiraci.vhd:5' bound to instance 'sabiraci_kumul' of component 'sabiraci' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:344]
+INFO: [Synth 8-3491] module 'sabiraci' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/new/sabiraci.vhd:5' bound to instance 'sabiraci_kumul' of component 'sabiraci' [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:372]
 INFO: [Synth 8-638] synthesizing module 'sabiraci' [D:/vlsi-projekat/project_4.srcs/sources_1/new/sabiraci.vhd:14]
 INFO: [Synth 8-3491] module 'edge_detector' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/imports/edge_detector.vhd:8' bound to instance 'diferencijator' of component 'edge_detector' [D:/vlsi-projekat/project_4.srcs/sources_1/new/sabiraci.vhd:30]
 INFO: [Synth 8-638] synthesizing module 'sabirac' [D:/vlsi-projekat/project_4.srcs/sources_1/new/sabirac.vhd:12]
@@ -148,54 +157,63 @@ INFO: [Synth 8-256] done synthesizing module 'sabirac' (0#1) [D:/vlsi-projekat/p
 INFO: [Synth 8-638] synthesizing module 'registar' [D:/vlsi-projekat/project_4.srcs/sources_1/new/registar.vhd:11]
 INFO: [Synth 8-256] done synthesizing module 'registar' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/registar.vhd:11]
 INFO: [Synth 8-256] done synthesizing module 'sabiraci' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/sabiraci.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'histogram_complete' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'final' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/final.vhd:11]
-WARNING: [Synth 8-6014] Unused sequential element state_reg_reg was removed.  [D:/vlsi-projekat/project_4.srcs/sources_1/new/kontroler.vhd:28]
-WARNING: [Synth 8-6014] Unused sequential element next_state_reg was removed.  [D:/vlsi-projekat/project_4.srcs/sources_1/new/kontroler.vhd:30]
-WARNING: [Synth 8-7129] Port kraj in module kontroler is either unconnected or has no load
+INFO: [Synth 8-256] done synthesizing module 'histogram_complete' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/histogram_complete.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'final' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/final.vhd:15]
+INFO: [Synth 8-3491] module 'uart_tx' declared at 'D:/vlsi-projekat/project_4.srcs/sources_1/imports/hdl/uart_tx.vhd:16' bound to instance 'uart' of component 'uart_tx' [D:/vlsi-projekat/project_4.srcs/sources_1/new/final_uart.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'uart_tx' [D:/vlsi-projekat/project_4.srcs/sources_1/imports/hdl/uart_tx.vhd:36]
+	Parameter CLK_FREQ bound to: 50 - type: integer 
+	Parameter SER_FREQ bound to: 115200 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_tx' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/imports/hdl/uart_tx.vhd:36]
+INFO: [Synth 8-226] default block is never used [D:/vlsi-projekat/project_4.srcs/sources_1/new/final_uart.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'final_uart' (0#1) [D:/vlsi-projekat/project_4.srcs/sources_1/new/final_uart.vhd:14]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 3607.520 ; gain = 2329.023
+Finished RTL Elaboration : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 3608.699 ; gain = 2330.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 3607.520 ; gain = 2329.023
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 3608.699 ; gain = 2330.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 3607.520 ; gain = 2329.023
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 3608.699 ; gain = 2330.219
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 3607.520 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 3608.699 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [D:/vlsi-projekat/project_4.srcs/constrs_1/new/clock_constraints.xdc]
 Finished Parsing XDC File [D:/vlsi-projekat/project_4.srcs/constrs_1/new/clock_constraints.xdc]
+Parsing XDC File [D:/vlsi-projekat/project_4.srcs/constrs_1/imports/xdc/pin_constraints_pynq.xdc]
+Finished Parsing XDC File [D:/vlsi-projekat/project_4.srcs/constrs_1/imports/xdc/pin_constraints_pynq.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/vlsi-projekat/project_4.srcs/constrs_1/imports/xdc/pin_constraints_pynq.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/final_uart_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/final_uart_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3607.520 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3608.699 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 3607.520 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 3608.699 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 3607.520 ; gain = 2329.023
+Finished Constraint Validation : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 3608.699 ; gain = 2330.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 3607.520 ; gain = 2329.023
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 3608.699 ; gain = 2330.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 3607.520 ; gain = 2329.023
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 3608.699 ; gain = 2330.219
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'edge_detector'
+INFO: [Synth 8-802] inferred FSM for state register 'tx_fsm_reg' in module 'uart_tx'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -204,8 +222,18 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'e
                   stwait |                               10 |                               10
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'edge_detector'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                    data |                              001 |                              001
+                  parity |                              010 |                              010
+                   stop1 |                              011 |                              011
+                   stop2 |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'tx_fsm_reg' using encoding 'sequential' in module 'uart_tx'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 3607.520 ; gain = 2329.023
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:59 ; elapsed = 00:01:02 . Memory (MB): peak = 3608.699 ; gain = 2330.219
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -213,15 +241,20 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   17 Bit       Adders := 8     
-	   2 Input   13 Bit       Adders := 18    
+	   2 Input   13 Bit       Adders := 19    
+	   2 Input    9 Bit       Adders := 1     
 	   2 Input    8 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
-	              104 Bit    Registers := 1     
-	               64 Bit    Registers := 2     
+	               64 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
-	               13 Bit    Registers := 37    
-	                8 Bit    Registers := 51    
-	                1 Bit    Registers := 33    
+	               13 Bit    Registers := 39    
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 52    
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 39    
 +---RAMs : 
 	              64K Bit	(8192 X 8 bit)          RAMs := 8     
 	               3K Bit	(256 X 13 bit)          RAMs := 8     
@@ -229,11 +262,16 @@ Detailed RTL Component Info :
 	   2 Input  104 Bit        Muxes := 2     
 	   2 Input   64 Bit        Muxes := 1     
 	   2 Input   17 Bit        Muxes := 9     
-	   2 Input   13 Bit        Muxes := 3     
+	   2 Input   13 Bit        Muxes := 5     
+	   2 Input    9 Bit        Muxes := 1     
 	   2 Input    8 Bit        Muxes := 1     
+	   5 Input    8 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 2     
 	   3 Input    2 Bit        Muxes := 2     
 	   2 Input    2 Bit        Muxes := 6     
-	   2 Input    1 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 8     
+	   5 Input    1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -250,36 +288,36 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3332] Sequential element (histogram/sabiraci_kumul/diferencijator/FSM_sequential_state_reg_reg[1]) is unused and will be removed from module final.
-WARNING: [Synth 8-3332] Sequential element (histogram/sabiraci_kumul/diferencijator/FSM_sequential_state_reg_reg[0]) is unused and will be removed from module final.
+WARNING: [Synth 8-3332] Sequential element (histogram/histogram/sabiraci_kumul/diferencijator/FSM_sequential_state_reg_reg[1]) is unused and will be removed from module final_uart.
+WARNING: [Synth 8-3332] Sequential element (histogram/histogram/sabiraci_kumul/diferencijator/FSM_sequential_state_reg_reg[0]) is unused and will be removed from module final_uart.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 6671.246 ; gain = 5392.750
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:26 . Memory (MB): peak = 6682.570 ; gain = 5404.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Preliminary Mapping Report (see note below)
-+------------+-----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name | RTL Object                                          | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+------------+-----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|final       | histogram/slika/IM_MEMS[0].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/slika/IM_MEMS[1].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/slika/IM_MEMS[2].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/slika/IM_MEMS[3].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/slika/IM_MEMS[4].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/slika/IM_MEMS[5].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/slika/IM_MEMS[6].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/slika/IM_MEMS[7].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/histogram/IM_MEMS[0].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|final       | histogram/histogram/IM_MEMS[1].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|final       | histogram/histogram/IM_MEMS[2].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|final       | histogram/histogram/IM_MEMS[3].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|final       | histogram/histogram/IM_MEMS[4].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|final       | histogram/histogram/IM_MEMS[5].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|final       | histogram/histogram/IM_MEMS[6].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|final       | histogram/histogram/IM_MEMS[7].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-+------------+-----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++------------+---------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                                    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+---------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|final_uart  | histogram/histogram/slika/IM_MEMS[0].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/slika/IM_MEMS[1].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/slika/IM_MEMS[2].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/slika/IM_MEMS[3].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/slika/IM_MEMS[4].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/slika/IM_MEMS[5].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/slika/IM_MEMS[6].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/slika/IM_MEMS[7].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[0].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[1].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[2].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[3].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[4].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[5].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[6].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[7].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+---------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 ---------------------------------------------------------------------------------
@@ -289,39 +327,39 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:01:29 . Memory (MB): peak = 6671.246 ; gain = 5392.750
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:27 ; elapsed = 00:01:33 . Memory (MB): peak = 6682.570 ; gain = 5404.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:24 ; elapsed = 00:01:30 . Memory (MB): peak = 6671.246 ; gain = 5392.750
+Finished Timing Optimization : Time (s): cpu = 00:01:28 ; elapsed = 00:01:34 . Memory (MB): peak = 6682.570 ; gain = 5404.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Final Mapping Report
-+------------+-----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name | RTL Object                                          | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+------------+-----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|final       | histogram/slika/IM_MEMS[0].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/slika/IM_MEMS[1].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/slika/IM_MEMS[2].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/slika/IM_MEMS[3].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/slika/IM_MEMS[4].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/slika/IM_MEMS[5].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/slika/IM_MEMS[6].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/slika/IM_MEMS[7].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
-|final       | histogram/histogram/IM_MEMS[0].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|final       | histogram/histogram/IM_MEMS[1].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|final       | histogram/histogram/IM_MEMS[2].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|final       | histogram/histogram/IM_MEMS[3].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|final       | histogram/histogram/IM_MEMS[4].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|final       | histogram/histogram/IM_MEMS[5].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|final       | histogram/histogram/IM_MEMS[6].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|final       | histogram/histogram/IM_MEMS[7].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-+------------+-----------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++------------+---------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                                                    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+---------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|final_uart  | histogram/histogram/slika/IM_MEMS[0].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/slika/IM_MEMS[1].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/slika/IM_MEMS[2].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/slika/IM_MEMS[3].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/slika/IM_MEMS[4].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/slika/IM_MEMS[5].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/slika/IM_MEMS[6].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/slika/IM_MEMS[7].IM_MEMi/ram_name_reg     | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[0].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[1].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[2].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[3].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[4].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[5].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[6].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|final_uart  | histogram/histogram/histogram/IM_MEMS[7].IM_MEMi/ram_name_reg | 256 x 13(READ_FIRST)   | W |   | 256 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++------------+---------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -330,7 +368,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:27 ; elapsed = 00:01:34 . Memory (MB): peak = 6671.246 ; gain = 5392.750
+Finished Technology Mapping : Time (s): cpu = 00:01:33 ; elapsed = 00:01:39 . Memory (MB): peak = 6682.570 ; gain = 5404.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -348,51 +386,51 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:32 ; elapsed = 00:01:39 . Memory (MB): peak = 6671.246 ; gain = 5392.750
+Finished IO Insertion : Time (s): cpu = 00:01:38 ; elapsed = 00:01:44 . Memory (MB): peak = 6682.570 ; gain = 5404.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:32 ; elapsed = 00:01:39 . Memory (MB): peak = 6671.246 ; gain = 5392.750
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:38 ; elapsed = 00:01:44 . Memory (MB): peak = 6682.570 ; gain = 5404.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:32 ; elapsed = 00:01:39 . Memory (MB): peak = 6671.246 ; gain = 5392.750
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:38 ; elapsed = 00:01:44 . Memory (MB): peak = 6682.570 ; gain = 5404.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:32 ; elapsed = 00:01:39 . Memory (MB): peak = 6671.246 ; gain = 5392.750
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:38 ; elapsed = 00:01:44 . Memory (MB): peak = 6682.570 ; gain = 5404.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:32 ; elapsed = 00:01:39 . Memory (MB): peak = 6671.246 ; gain = 5392.750
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:38 ; elapsed = 00:01:44 . Memory (MB): peak = 6682.570 ; gain = 5404.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:32 ; elapsed = 00:01:39 . Memory (MB): peak = 6671.246 ; gain = 5392.750
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:38 ; elapsed = 00:01:44 . Memory (MB): peak = 6682.570 ; gain = 5404.090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+------------+----------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name | RTL Name                   | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------+----------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|final       | histogram/reg12/output_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|final       | histogram/reg13/output_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|final       | histogram/reg9/output_reg  | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|final       | histogram/reg17/output_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-+------------+----------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++------------+--------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+--------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|final_uart  | histogram/histogram/reg12/output_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|final_uart  | histogram/histogram/reg13/output_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|final_uart  | histogram/histogram/reg9/output_reg  | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|final_uart  | histogram/histogram/reg17/output_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+--------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -411,43 +449,42 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |BUFG     |     1|
-|2     |CARRY4   |    95|
+|1     |BUFG     |     2|
+|2     |CARRY4   |    98|
 |3     |LUT1     |    12|
-|4     |LUT2     |   175|
-|5     |LUT3     |    99|
-|6     |LUT4     |    69|
-|7     |LUT5     |    20|
-|8     |LUT6     |    51|
+|4     |LUT2     |   155|
+|5     |LUT3     |   104|
+|6     |LUT4     |    93|
+|7     |LUT5     |    24|
+|8     |LUT6     |   145|
 |9     |RAMB18E1 |     8|
 |10    |RAMB36E1 |    16|
 |26    |SRL16E   |     4|
-|27    |FDRE     |   731|
-|28    |FDSE     |    64|
-|29    |IBUF     |     3|
-|30    |OBUF     |    64|
+|27    |FDRE     |   688|
+|28    |IBUF     |     4|
+|29    |OBUF     |     2|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:32 ; elapsed = 00:01:39 . Memory (MB): peak = 6671.246 ; gain = 5392.750
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:38 ; elapsed = 00:01:44 . Memory (MB): peak = 6682.570 ; gain = 5404.090
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:51 ; elapsed = 00:01:36 . Memory (MB): peak = 6671.246 ; gain = 5392.750
-Synthesis Optimization Complete : Time (s): cpu = 00:01:32 ; elapsed = 00:01:39 . Memory (MB): peak = 6671.246 ; gain = 5392.750
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:55 ; elapsed = 00:01:41 . Memory (MB): peak = 6682.570 ; gain = 5404.090
+Synthesis Optimization Complete : Time (s): cpu = 00:01:38 ; elapsed = 00:01:44 . Memory (MB): peak = 6682.570 ; gain = 5404.090
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.042 . Memory (MB): peak = 6671.246 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 119 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 6682.570 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 122 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 6671.246 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 6682.570 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 946afeaf
+Synth Design complete, checksum: 6f5decc0
 INFO: [Common 17-83] Releasing license: Synthesis
-104 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+117 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:37 ; elapsed = 00:01:46 . Memory (MB): peak = 6671.246 ; gain = 5392.750
-INFO: [Common 17-1381] The checkpoint 'D:/vlsi-projekat/project_4.runs/synth_1/final.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file final_utilization_synth.rpt -pb final_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jan 15 21:56:39 2024...
+synth_design: Time (s): cpu = 00:01:43 ; elapsed = 00:01:51 . Memory (MB): peak = 6682.570 ; gain = 5404.090
+INFO: [Common 17-1381] The checkpoint 'D:/vlsi-projekat/project_4.runs/synth_1/final_uart.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file final_uart_utilization_synth.rpt -pb final_uart_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 21 23:55:41 2024...

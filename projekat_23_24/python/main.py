@@ -7,7 +7,7 @@ IMAGE_SIZE = 256
 
 # Read image from FPGA
 # Uncomment for pyserial read
-ser = serial.Serial('COM3', 115200)
+ser = serial.Serial('COM5', 115200)
 
 fpgaIm = np.zeros([IMAGE_SIZE, IMAGE_SIZE])
 

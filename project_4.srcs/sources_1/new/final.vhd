@@ -5,7 +5,11 @@ entity final is
         clk:in std_logic;
         start:in std_logic;
         output:out std_logic_vector(63 downto 0);
-        reset:in std_logic
+        send_ready:out std_logic;
+        reset:in std_logic;
+        ram:out std_logic_vector(2 downto 0);
+        salji:in std_logic;
+        tx_busy:in std_logic
     );
 end final;
 architecture Structural of final is
@@ -16,6 +20,7 @@ architecture Structural of final is
     signal kum_complete:std_logic;
     signal start_slika:std_logic;
     signal kraj:std_logic;
+    signal sender:std_logic;
     component kontroler is
         port(
             clk:in std_logic;
@@ -27,6 +32,8 @@ architecture Structural of final is
             kum_complete:in std_logic;
             start_slika:out std_logic;
             kraj:in std_logic;
+            salji:in std_logic;
+            send:out std_logic;
             reset:in std_logic
         );
     end component;
@@ -41,6 +48,9 @@ architecture Structural of final is
             kraj:out std_logic;
             reset:in std_logic;
             output:out std_logic_vector(63 downto 0);
+            tx_busy:in std_logic;
+            start_ispis:in std_logic;
+            ram:out std_logic_vector(2 downto 0);
             start_slika:in std_logic
         );
     end component;
@@ -55,6 +65,8 @@ begin
         start_kum=>start_kum,
         kum_complete=>kum_complete,
         kraj=>kraj,
+        salji=>salji,
+        send=>sender,
         start_slika=>start_slika
     );
     histogram:histogram_complete port map(
@@ -67,6 +79,10 @@ begin
         reset=>reset,
         output=>output,
         kraj=>kraj,
+        tx_busy=>tx_busy,
+        start_ispis=>sender,
+        ram=>ram,
         start_slika=>start_slika
     );
+    send_ready<=kraj;
 end Structural;

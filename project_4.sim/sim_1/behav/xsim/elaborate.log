@@ -1,44 +1,7 @@
 Vivado Simulator v2022.1
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot final_tb_behav xil_defaultlib.final_tb -log elaborate.log 
+Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot final_uart_tb_behav xil_defaultlib.final_uart_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_textio
-Compiling package xil_defaultlib.ram_definitions_pk
-Compiling architecture behavioral of entity xil_defaultlib.kontroler [kontroler_default]
-Compiling architecture behavioral of entity xil_defaultlib.registar_1bit [registar_1bit_default]
-Compiling architecture behavioral of entity xil_defaultlib.klamper [klamper_default]
-Compiling architecture behavioral of entity xil_defaultlib.counter_13bit [counter_13bit_default]
-Compiling architecture behavioral of entity xil_defaultlib.im_ram [\im_ram(g_ram_depth=8192)(1,16)(...]
-Compiling architecture behavioral of entity xil_defaultlib.im_ram [\im_ram(g_ram_depth=8192,g_ram_i...]
-Compiling architecture behavioral of entity xil_defaultlib.im_ram [\im_ram(g_ram_depth=8192,g_ram_i...]
-Compiling architecture behavioral of entity xil_defaultlib.im_ram [\im_ram(g_ram_depth=8192,g_ram_i...]
-Compiling architecture behavioral of entity xil_defaultlib.im_ram [\im_ram(g_ram_depth=8192,g_ram_i...]
-Compiling architecture behavioral of entity xil_defaultlib.im_ram [\im_ram(g_ram_depth=8192,g_ram_i...]
-Compiling architecture behavioral of entity xil_defaultlib.im_ram [\im_ram(g_ram_depth=8192,g_ram_i...]
-Compiling architecture behavioral of entity xil_defaultlib.im_ram [\im_ram(g_ram_depth=8192,g_ram_i...]
-Compiling architecture rtl of entity xil_defaultlib.im_ram_inst_example [im_ram_inst_example_default]
-Compiling architecture behavioral of entity xil_defaultlib.edge_detector [edge_detector_default]
-Compiling architecture behavioral of entity xil_defaultlib.hist_ram_block [\hist_ram_block(1,16)(1,0)\]
-Compiling architecture rtl of entity xil_defaultlib.hist_ram [hist_ram_default]
-Compiling architecture behavioral of entity xil_defaultlib.registar_8bit [registar_8bit_default]
-Compiling architecture behavioral of entity xil_defaultlib.registar_8bit_real [registar_8bit_real_default]
-Compiling architecture behavioral of entity xil_defaultlib.inkrementer [inkrementer_default]
-Compiling architecture behavioral of entity xil_defaultlib.brojaci [brojaci_default]
-Compiling architecture behavioral of entity xil_defaultlib.registar_13bit [registar_13bit_default]
-Compiling architecture behavioral of entity xil_defaultlib.counter_8bit [counter_8bit_default]
-Compiling architecture behavioral of entity xil_defaultlib.sabirac [sabirac_default]
-Compiling architecture behavioral of entity xil_defaultlib.registar [registar_default]
-Compiling architecture behavioral of entity xil_defaultlib.sabiraci [sabiraci_default]
-Compiling architecture structural of entity xil_defaultlib.histogram_complete [histogram_complete_default]
-Compiling architecture structural of entity xil_defaultlib.final [final_default]
-Compiling architecture sim of entity xil_defaultlib.final_tb
-Built simulation snapshot final_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

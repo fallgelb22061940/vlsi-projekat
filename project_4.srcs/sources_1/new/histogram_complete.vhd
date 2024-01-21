@@ -12,6 +12,9 @@ entity histogram_complete is
         kraj:out std_logic;
         reset:in std_logic;
         output:out std_logic_vector(63 downto 0);
+        tx_busy:in std_logic;
+        ram:out std_logic_vector(2 downto 0);
+        start_ispis:in std_logic;
         start_slika:in std_logic
     );
 end histogram_complete;
@@ -56,6 +59,10 @@ architecture Structural of histogram_complete is
     signal adresa1tmp:std_logic_vector(12 downto 0);
     signal read_pic_complete_tmp:std_logic;
     signal kraj_tmp:std_logic;
+    signal output_addr:std_logic_vector(12 downto 0);
+    signal ram_tmp:std_logic_vector(2 downto 0);
+    signal adresa3:std_logic_vector(12 downto 0);
+    signal ispis:std_logic;
     component klamper is
         port(
             input:in std_logic_vector(12 downto 0);
@@ -151,6 +158,15 @@ architecture Structural of histogram_complete is
             output:out std_logic_vector(63 downto 0)
         );
     end component;
+    component uart_counter is
+        port(
+            start:in std_logic;
+            tx_busy:in std_logic;
+            ram:out std_logic_vector(2 downto 0);
+            ispis:out std_logic;
+            adresa:out std_logic_vector(12 downto 0)
+        );
+    end component;
 begin
     adrese2:process(start_kum2,start_slika_tmp,kum_brojac_output,adresa2)is
     begin
@@ -197,6 +213,22 @@ begin
         input=>kum_rezultat,
         output=>kum_rezultat2
     );
+    citac:uart_counter port map(
+        start=>start_ispis,
+        tx_busy=>tx_busy,
+        ispis=>ispis,
+        adresa=>output_addr,
+        ram=>ram_tmp
+    );
+    ram<=ram_tmp;
+    process(ispis)is
+    begin
+        if ispis='1'then
+            adresa3<=output_addr;
+        else
+            adresa3<=adresa1;
+        end if;
+    end process;
     adresa:counter_13bit port map(
         clk=>clk,
         in_signal=>read_picture or start_slika_tmp,
@@ -207,7 +239,7 @@ begin
     read_pic_complete<=read_pic_complete_tmp;
     process(read_pic_complete_tmp,histogram_complete)is
     begin
-        if read_pic_complete_tmp='1'and histogram_complete='1'then
+        if read_pic_complete_tmp='1'and histogram_complete='1'and start_slika='1'then
             kraj_tmp<='1';
         else
             kraj_tmp<='0';
@@ -222,7 +254,7 @@ begin
     slika:im_ram_inst_example port map(
         clk=>clk,
         addra=>adresa1tmp,
-        addrb=>adresa1,
+        addrb=>adresa3,
         doutb=>adresa2,
         dina=>output_signal(98 downto 91)&output_signal(85 downto 78)&output_signal(72 downto 65)&output_signal(59 downto 52)&output_signal(46 downto 39)&output_signal(33 downto 26)&output_signal(20 downto 13)&output_signal(7 downto 0),
         enb=>'1',

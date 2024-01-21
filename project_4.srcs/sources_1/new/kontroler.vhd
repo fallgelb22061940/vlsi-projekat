@@ -12,43 +12,15 @@ entity kontroler is
         kum_complete:in std_logic;
         start_slika:out std_logic;
         kraj:in std_logic;
+        salji:in std_logic;
+        send:out std_logic;
         reset:in std_logic
     );
 end kontroler;
 architecture behavioral of kontroler is
-    type state is (idle,histogram,kumulativni,slika);
     signal counter:unsigned(12 downto 0):=(others=>'0');
     signal read_pic_temp:std_logic:='0';
-    signal state_reg,next_state:state;
 begin
-    state_transition:process(clk)is
-    begin
-        if rising_edge(clk)then
-            if reset='1'then
-                state_reg<=idle;
-            else
-                state_reg<=next_state;
-            end if;        
-        end if;
-    end process state_transition;
-    taster_logic:process(clk)is
-    begin
-        if rising_edge(clk)then
-            if reset='0'then
-                next_state<=idle;
-            elsif start='1'then
-                next_state<=histogram;
-            elsif hist_complete='1'then
-                next_state<=kumulativni;
-            elsif kum_complete='1'then
-                next_state<=slika;
-            elsif kraj='1'then
-                next_state<=idle;
-            else
-                next_state<=state_reg;
-            end if;
-        end if;
-    end process taster_logic;
     brojac:process(clk)is
     begin
         if rising_edge(clk)then
@@ -84,4 +56,14 @@ begin
             end if;
         end if;
     end process ispravljanje;
+    ispis:process(clk)is
+    begin
+        if rising_edge(clk)then
+            if kraj='1'then
+                send<=salji;
+            else
+                send<='0';
+            end if;
+        end if;
+    end process;
 end behavioral;
