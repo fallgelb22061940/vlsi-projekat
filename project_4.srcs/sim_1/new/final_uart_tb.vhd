@@ -28,18 +28,20 @@ begin
         tx=>tx,
         send_ready=>send_ready
     );
-    clk<=not clk after 5ns;
+    clk<=not clk after 10ns;
     stimulus:process is
     begin
         reset<='1';
-        wait for 30ns;
+        wait for 60ns;
         reset<='0';
-        wait for 10ns;
+        wait for 20ns;
         start<='1';
-        wait for 10ns;
+        wait for 20ns;
         start<='0';
-        wait for 170000ns;
+        wait for 340000ns;
         send<='1';
+        wait for 20ns;
+        send<='0';
         wait;
     end process;
 end Behavioral;

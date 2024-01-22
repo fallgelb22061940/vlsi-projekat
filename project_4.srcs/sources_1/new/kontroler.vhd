@@ -13,6 +13,7 @@ entity kontroler is
         start_slika:out std_logic;
         kraj:in std_logic;
         salji:in std_logic;
+        load:in std_logic;
         send:out std_logic;
         reset:in std_logic
     );
@@ -20,7 +21,21 @@ end kontroler;
 architecture behavioral of kontroler is
     signal counter:unsigned(12 downto 0):=(others=>'0');
     signal read_pic_temp:std_logic:='0';
+    component button is
+        port(
+            taster:in std_logic;
+            load:in std_logic;
+            clk:in std_logic;
+            output:out std_logic
+        );
+    end component;
 begin
+    dugme:button port map(
+        taster=>salji,
+        load=>load,
+        clk=>clk,
+        output=>send
+    );
     brojac:process(clk)is
     begin
         if rising_edge(clk)then
@@ -55,15 +70,5 @@ begin
                 start_slika<='0';
             end if;
         end if;
-    end process ispravljanje;
-    ispis:process(clk)is
-    begin
-        if rising_edge(clk)then
-            if kraj='1'then
-                send<=salji;
-            else
-                send<='0';
-            end if;
-        end if;
-    end process;
+    end process ispravljanje;    
 end behavioral;

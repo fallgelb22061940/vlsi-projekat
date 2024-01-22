@@ -15,6 +15,7 @@ entity histogram_complete is
         tx_busy:in std_logic;
         ram:out std_logic_vector(2 downto 0);
         start_ispis:in std_logic;
+        load:out std_logic;
         start_slika:in std_logic
     );
 end histogram_complete;
@@ -221,7 +222,7 @@ begin
         ram=>ram_tmp
     );
     ram<=ram_tmp;
-    process(ispis)is
+    process(ispis,output_addr,adresa1)is
     begin
         if ispis='1'then
             adresa3<=output_addr;
@@ -376,4 +377,5 @@ begin
         kum_complete=>kum_complete,
         output=>output_kumul
     );
+    load<=ispis;
 end Structural;

@@ -20,6 +20,7 @@ architecture Structural of final is
     signal kum_complete:std_logic;
     signal start_slika:std_logic;
     signal kraj:std_logic;
+    signal load1:std_logic;
     signal sender:std_logic;
     component kontroler is
         port(
@@ -34,6 +35,7 @@ architecture Structural of final is
             kraj:in std_logic;
             salji:in std_logic;
             send:out std_logic;
+            load:in std_logic;
             reset:in std_logic
         );
     end component;
@@ -51,6 +53,7 @@ architecture Structural of final is
             tx_busy:in std_logic;
             start_ispis:in std_logic;
             ram:out std_logic_vector(2 downto 0);
+            load:out std_logic;
             start_slika:in std_logic
         );
     end component;
@@ -67,6 +70,7 @@ begin
         kraj=>kraj,
         salji=>salji,
         send=>sender,
+        load=>load1,
         start_slika=>start_slika
     );
     histogram:histogram_complete port map(
@@ -82,6 +86,7 @@ begin
         tx_busy=>tx_busy,
         start_ispis=>sender,
         ram=>ram,
+        load=>load1,
         start_slika=>start_slika
     );
     send_ready<=kraj;

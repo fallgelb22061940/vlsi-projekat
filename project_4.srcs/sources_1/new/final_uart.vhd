@@ -46,7 +46,6 @@ architecture Behavioral of final_uart is
             tx_data        : in    std_logic_vector(7 downto 0);    -- Data to transmit
             tx_busy     : out   std_logic                       -- Active while UART is busy and cannot receive data
         );
-
     end component;
 begin
     histogram:final port map(
