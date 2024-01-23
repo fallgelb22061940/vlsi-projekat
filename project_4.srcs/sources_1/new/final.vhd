@@ -23,6 +23,7 @@ architecture Structural of final is
     signal kraj:std_logic;
     signal load1:std_logic;
     signal sender:std_logic;
+    signal mux_control:std_logic;
     component kontroler is
         port(
             clk:in std_logic;
@@ -55,6 +56,7 @@ architecture Structural of final is
             start_ispis:in std_logic;
             ram:out std_logic_vector(2 downto 0);
             load:out std_logic;
+            mux_control:in std_logic;
             start_slika:in std_logic
         );
     end component;
@@ -70,7 +72,7 @@ begin
         kum_complete=>kum_complete,
         kraj=>kraj,
         salji=>salji,
-        send=>sender,
+        send=>mux_control,
         load=>load1,
         start_slika=>start_slika
     );
@@ -88,6 +90,7 @@ begin
         start_ispis=>salji,
         ram=>ram,
         load=>load1,
+        mux_control=>mux_control,
         start_slika=>start_slika
     );
     send_ready<=kraj;

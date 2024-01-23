@@ -32,15 +32,19 @@ begin
     stimulus:process is
     begin
         reset<='1';
-        wait for 60ns;
+        wait for 6000us;
         reset<='0';
-        wait for 20ns;
+        wait for 200us;
         start<='1';
-        wait for 20ns;
+        wait for 4000us;
         start<='0';
-        wait for 340000ns;
+        wait for 340000us;
         send<='1';
-        wait for 20ns;
+        wait for 6000us;
+        send<='0';
+        wait for 1200us;
+        send<='1';
+        wait for 2000us;
         send<='0';
         wait;
     end process;

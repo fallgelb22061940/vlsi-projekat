@@ -16,6 +16,7 @@ entity histogram_complete is
         ram:out std_logic_vector(2 downto 0);
         start_ispis:in std_logic;
         load:out std_logic;
+        mux_control:in std_logic;
         start_slika:in std_logic
     );
 end histogram_complete;
@@ -226,7 +227,7 @@ begin
     ram<=ram_tmp;
     process(ispis,output_addr,adresa1)is
     begin
-        if ispis='1'then
+        if mux_control='1'then
             adresa3<=output_addr;
         else
             adresa3<=adresa1;

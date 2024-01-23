@@ -2,6 +2,7 @@ import serial as serial
 import numpy as np
 import struct as struct
 import matplotlib.pyplot as plt
+from PIL import Image #dodato
 
 IMAGE_SIZE = 256
 
@@ -10,9 +11,8 @@ IMAGE_SIZE = 256
 ser = serial.Serial('COM4', 115200)
 
 fpgaIm = np.zeros([IMAGE_SIZE, IMAGE_SIZE])
-print("start")
+
 pixelValsRaw = ser.read(int(IMAGE_SIZE*IMAGE_SIZE))
-print(pixelValsRaw)
 pixelVals = struct.unpack(f'<{int(IMAGE_SIZE*IMAGE_SIZE)}B', pixelValsRaw)
 
 fpgaIm = np.reshape(np.array(pixelVals), [IMAGE_SIZE, IMAGE_SIZE])
@@ -25,7 +25,9 @@ plt.show()
 
 # Read corrupted image from SW file
 
-swIm = plt.imread('lenaCorrupted.bmp')
+#swIm = plt.imread('lenaCorrupted.bmp')
+swIm = np.array(Image.open('lenaCorrupted.bmp')) #dodato
+swIm.setflags(write=1)                           #dodato
 
 plt.imshow(swIm, cmap='gray', vmin=0, vmax=255)
 plt.title("SW original image")
@@ -71,4 +73,3 @@ for r in range(swIm.shape[0]):
 plt.imshow(swIm, cmap='gray', vmin=0, vmax=255)
 plt.title("SW equalized image")
 plt.show()
-
