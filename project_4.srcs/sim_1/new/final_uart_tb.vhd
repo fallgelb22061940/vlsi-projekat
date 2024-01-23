@@ -8,7 +8,7 @@ architecture Behavioral of final_uart_tb is
     signal send:std_logic;
     signal reset:std_logic;
     signal tx:std_logic;
-    signal send_ready:std_logic;
+    signal led0:std_logic;
     component final_uart is
         port(
             clk:in std_logic;
@@ -16,7 +16,7 @@ architecture Behavioral of final_uart_tb is
             send:in std_logic;
             reset:in std_logic;
             tx:out std_logic;
-            send_ready:out std_logic
+            led0:out std_logic
         );
     end component;
 begin
@@ -26,7 +26,7 @@ begin
         send=>send,
         reset=>reset,
         tx=>tx,
-        send_ready=>send_ready
+        led0=>led0
     );
     clk<=not clk after 10ns;
     stimulus:process is

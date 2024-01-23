@@ -165,6 +165,7 @@ architecture Structural of histogram_complete is
             tx_busy:in std_logic;
             ram:out std_logic_vector(2 downto 0);
             ispis:out std_logic;
+            clk:in std_logic;
             adresa:out std_logic_vector(12 downto 0)
         );
     end component;
@@ -219,6 +220,7 @@ begin
         tx_busy=>tx_busy,
         ispis=>ispis,
         adresa=>output_addr,
+        clk=>clk,
         ram=>ram_tmp
     );
     ram<=ram_tmp;

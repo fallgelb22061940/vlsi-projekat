@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Sun Jan 21 23:58:35 2024
+| Date             : Tue Jan 23 00:12:00 2024
 | Host             : DESKTOP-0OT9859 running 64-bit major release  (build 9200)
 | Command          : report_power -file final_uart_power_routed.rpt -pb final_uart_power_summary_routed.pb -rpx final_uart_power_routed.rpx
 | Design           : final_uart
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.196        |
+| Total On-Chip Power (W)  | 0.197        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.088        |
+| Dynamic (W)              | 0.089        |
 | Device Static (W)        | 0.108        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 82.7         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.005 |        4 |       --- |             --- |
-| Slice Logic             |     0.004 |     1580 |       --- |             --- |
-|   LUT as Logic          |     0.003 |      410 |     53200 |            0.77 |
-|   Register              |    <0.001 |      795 |    106400 |            0.75 |
+| Slice Logic             |     0.004 |     1562 |       --- |             --- |
+|   LUT as Logic          |     0.003 |      393 |     53200 |            0.74 |
+|   Register              |    <0.001 |      794 |    106400 |            0.75 |
 |   CARRY4                |    <0.001 |       98 |     13300 |            0.74 |
 |   BUFG                  |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Shift Register |    <0.001 |        4 |     17400 |            0.02 |
 |   Others                |     0.000 |      133 |       --- |             --- |
-| Signals                 |     0.011 |     1480 |       --- |             --- |
+| Signals                 |     0.012 |     1463 |       --- |             --- |
 | Block RAM               |     0.067 |       20 |       140 |           14.29 |
 | I/O                     |    <0.001 |        6 |       125 |            4.80 |
 | Static Power            |     0.108 |          |           |                 |
-| Total                   |     0.196 |          |           |                 |
+| Total                   |     0.197 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.091 |       0.083 |      0.008 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.092 |       0.084 |      0.008 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -151,9 +151,9 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
-| final_uart           |     0.088 |
-|   histogram          |     0.087 |
-|     histogram        |     0.087 |
+| final_uart           |     0.089 |
+|   histogram          |     0.088 |
+|     histogram        |     0.088 |
 |       histogram      |     0.015 |
 |       inkrementers   |     0.007 |
 |       kum_brojac     |     0.001 |

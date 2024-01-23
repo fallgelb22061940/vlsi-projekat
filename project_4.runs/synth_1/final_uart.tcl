@@ -72,7 +72,7 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 3
-set_param synth.incrementalSynthesisCache C:/Users/Vlada/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-11496-DESKTOP-0OT9859/incrSyn
+set_param xicom.use_bs_reader 1
 set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
@@ -115,7 +115,6 @@ read_vhdl -library xil_defaultlib {
   D:/vlsi-projekat/project_4.srcs/sources_1/imports/hdl/uart_tx.vhd
   D:/vlsi-projekat/project_4.srcs/sources_1/new/final_uart.vhd
   D:/vlsi-projekat/project_4.srcs/sources_1/new/button.vhd
-  D:/vlsi-projekat/project_4.srcs/sources_1/new/sender.vhd
   D:/vlsi-projekat/project_4.srcs/sources_1/new/uart_counter.vhd
 }
 OPTRACE "Adding files" END { }

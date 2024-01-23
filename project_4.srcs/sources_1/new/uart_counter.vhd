@@ -19,29 +19,30 @@ begin
     process(clk)is
     begin
         if rising_edge(clk)then
-            if tx_busy='0'then
-                if start='1'then
-                    load<='1';
-                elsif memorija=7 and counter=8191 then
-                    load<='0';
-                else
-                    load<=load;
-                end if;
-                if load='1'then
-                    if counter=8191 then
-                        memorija<=memorija+1;
-                        counter<=to_unsigned(0,13);
-                    else
-                        ram<=std_logic_vector(memorija);
-                        counter<=counter+1;
-                        adresa<=std_logic_vector(counter);
-                    end if;
+            if start='1'then
+                load<='1';
+            elsif counter=8191 and memorija=7 then
+                load<='0';
+            else
+                load<=load;
+            end if;
+        end if;
+    end process;
+    process(tx_busy)is
+    begin
+        if rising_edge(tx_busy)then
+            if load='1'then
+                if counter=8191 then
+                    memorija<=memorija+1;
+                    counter<=to_unsigned(0,13);
                 else
                     ram<=std_logic_vector(memorija);
+                    counter<=counter+1;
                     adresa<=std_logic_vector(counter);
                 end if;
             else
-                load<='0';
+                ram<=std_logic_vector(memorija);
+                adresa<=std_logic_vector(counter);
             end if;
         end if;
     end process;

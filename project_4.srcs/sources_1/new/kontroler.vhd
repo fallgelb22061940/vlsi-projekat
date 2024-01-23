@@ -26,6 +26,7 @@ architecture behavioral of kontroler is
             taster:in std_logic;
             load:in std_logic;
             clk:in std_logic;
+            enable:in std_logic;
             output:out std_logic
         );
     end component;
@@ -34,6 +35,7 @@ begin
         taster=>salji,
         load=>load,
         clk=>clk,
+        enable=>kraj,
         output=>send
     );
     brojac:process(clk)is

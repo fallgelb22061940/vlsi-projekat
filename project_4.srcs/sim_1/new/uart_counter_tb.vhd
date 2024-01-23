@@ -9,7 +9,7 @@ architecture sim of uart_counter_tb is
             tx_busy:in std_logic;
             ram:out std_logic_vector(2 downto 0);
             ispis:out std_logic;
-            clk:in std_logic;
+            --clk:in std_logic;
             adresa:out std_logic_vector(12 downto 0)
         );
     end component;
@@ -18,24 +18,28 @@ architecture sim of uart_counter_tb is
     signal ram:std_logic_vector(2 downto 0);
     signal adresa:std_logic_vector(12 downto 0);
     signal ispis:std_logic;
-    signal clk:std_logic:='0';
+    --signal clk:std_logic:='0';
 begin
     uut:uart_counter port map(
         start=>start,
         tx_busy=>tx_busy,
         ram=>ram,
         ispis=>ispis,
-        clk=>clk,
+        --clk=>clk,
         adresa=>adresa
     );
-    tx_busy<=not tx_busy after 80ns;
-    clk<=not clk after 5ns;
+    tx_busy<=not tx_busy after 10ns;
+    --clk<=not clk after 5ns;
     stimulus:process is
     begin
         start<='0';
-        wait for 10 ns;
+        wait for 30 ns;
         start<='1';
-        wait for 10 ns;
+        wait for 20 ns;
+        start<='0';
+        wait for 1.5ms;
+        start<='1';
+        wait for 100ns;
         start<='0';
         wait;
     end process;

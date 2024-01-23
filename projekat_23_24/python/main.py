@@ -7,11 +7,12 @@ IMAGE_SIZE = 256
 
 # Read image from FPGA
 # Uncomment for pyserial read
-ser = serial.Serial('COM5', 115200)
+ser = serial.Serial('COM4', 115200)
 
 fpgaIm = np.zeros([IMAGE_SIZE, IMAGE_SIZE])
-
+print("start")
 pixelValsRaw = ser.read(int(IMAGE_SIZE*IMAGE_SIZE))
+print(pixelValsRaw)
 pixelVals = struct.unpack(f'<{int(IMAGE_SIZE*IMAGE_SIZE)}B', pixelValsRaw)
 
 fpgaIm = np.reshape(np.array(pixelVals), [IMAGE_SIZE, IMAGE_SIZE])

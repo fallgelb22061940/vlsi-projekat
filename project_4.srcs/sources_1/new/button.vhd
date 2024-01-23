@@ -6,6 +6,7 @@ entity button is
         taster:in std_logic;
         load:in std_logic;
         clk:in std_logic;
+        enable:in std_logic;
         output:out std_logic
     );
 end button;
@@ -15,13 +16,18 @@ begin
     process(clk)is
     begin
         if rising_edge(clk)then
-            if taster<='1'and load<='1'then
-                click<='1';
-            elsif taster<='0'and load<='1'then
-                click<=click;
+            if enable='1'then
+                if taster='1'and load='1'then
+                    click<='1';
+                elsif taster='0'and load='1'then
+                    click<=click;
+                else
+                    click<='0';
+                end if;
             else
                 click<='0';
             end if;
         end if;
     end process;
+    output<=click;
 end behavioral;

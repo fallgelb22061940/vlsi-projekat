@@ -9,7 +9,8 @@ entity final is
         reset:in std_logic;
         ram:out std_logic_vector(2 downto 0);
         salji:in std_logic;
-        tx_busy:in std_logic
+        tx_busy:in std_logic;
+        tx_valid:out std_logic
     );
 end final;
 architecture Structural of final is
@@ -84,10 +85,11 @@ begin
         output=>output,
         kraj=>kraj,
         tx_busy=>tx_busy,
-        start_ispis=>sender,
+        start_ispis=>salji,
         ram=>ram,
         load=>load1,
         start_slika=>start_slika
     );
     send_ready<=kraj;
+    tx_valid<=load1;
 end Structural;

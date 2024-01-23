@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Mon Jan 22 00:01:29 2024
-# Process ID: 3212
+# Start of session at: Tue Jan 23 00:12:24 2024
+# Process ID: 2208
 # Current directory: D:/vlsi-projekat/project_4.runs/impl_1
 # Command line: vivado.exe -log final_uart.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source final_uart.tcl -notrace
 # Log file: D:/vlsi-projekat/project_4.runs/impl_1/final_uart.vdi

@@ -8,7 +8,7 @@ entity final_uart is
         send:in std_logic;
         reset:in std_logic;
         tx:out std_logic;
-        send_ready:out std_logic
+        led0:out std_logic
     );
 end final_uart;
 architecture Behavioral of final_uart is
@@ -16,6 +16,7 @@ architecture Behavioral of final_uart is
     signal tx_busy:std_logic;
     signal tx_data:std_logic_vector(7 downto 0);
     signal ram:std_logic_vector(2 downto 0);
+    signal load:std_logic;
     component final is
         port(
             clk:in std_logic;
@@ -25,6 +26,7 @@ architecture Behavioral of final_uart is
             reset:in std_logic;
             ram:out std_logic_vector(2 downto 0);
             salji:in std_logic;
+            tx_valid:out std_logic;
             tx_busy:in std_logic
         );
     end component;
@@ -52,10 +54,11 @@ begin
         clk=>clk,
         start=>start,
         output=>slika,
-        send_ready=>send_ready,
+        send_ready=>led0,
         reset=>reset,
         ram=>ram,
         salji=>send,
+        tx_valid=>load,
         tx_busy=>tx_busy
     );
     uart:uart_tx port map(
@@ -63,7 +66,7 @@ begin
         rst=>'0',
         tx=>tx,
         par_en=>'0',
-        tx_dvalid=>send,
+        tx_dvalid=>load,
         tx_busy=>tx_busy,
         tx_data=>tx_data
     );
